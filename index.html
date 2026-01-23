@@ -15,7 +15,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Rungs">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ðª</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪜</text></svg>">
     
     <style>
         :root {
@@ -984,7 +984,7 @@
         }
 
         .streak-value.fire::after {
-            content: 'ð¥';
+            content: '🔥';
             margin-left: 5px;
         }
 
@@ -1563,7 +1563,7 @@
                             <span class="account-sync" id="sync-status">${getSyncStatusText()}</span>
                         </div>
                         <div class="account-actions">
-                            <button class="btn" onclick="GSAuth.sync()">â» Sync</button>
+                            <button class="btn" onclick="GSAuth.sync()">↻ Sync</button>
                             <button class="btn" onclick="GSAuth.signOut()">Sign Out</button>
                         </div>
                     </div>
@@ -1572,7 +1572,7 @@
                 section.innerHTML = `
                     <div class="account-signed-out account-disabled">
                         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Cloud sync & extra features</p>
-                        <button class="btn disabled" disabled>ð Sign in with Google</button>
+                        <button class="btn disabled" disabled>🔒 Sign in with Google</button>
                         <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Turn off Plain Mode to enable</p>
                     </div>
                 `;
@@ -1580,7 +1580,7 @@
                 section.innerHTML = `
                     <div class="account-signed-out">
                         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Save progress across devices</p>
-                        <button class="btn btn-primary" onclick="GSAuth.signIn()">ð Sign in with Google</button>
+                        <button class="btn btn-primary" onclick="GSAuth.signIn()">🔐 Sign in with Google</button>
                     </div>
                 `;
             }
@@ -1606,7 +1606,7 @@
                 case 'syncing':
                     indicator.style.display = 'block';
                     indicator.classList.add('syncing');
-                    indicator.textContent = 'ð';
+                    indicator.textContent = '🔄';
                     break;
                 case 'synced':
                     indicator.style.display = 'block';
@@ -1695,7 +1695,7 @@
     <div class="menu-modal" id="menu-modal">
         <div class="menu-content">
             <div class="menu-header">
-                <h2>ð Menu</h2>
+                <h2>📋 Menu</h2>
                 <button class="close-btn" onclick="closeMenu()">&times;</button>
             </div>
 
@@ -1705,7 +1705,7 @@
                 <div id="account-section" class="account-section">
                     <div class="account-signed-out account-disabled">
                         <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Cloud sync & extra features</p>
-                        <button class="btn disabled" disabled>ð Sign in with Google</button>
+                        <button class="btn disabled" disabled>🔒 Sign in with Google</button>
                         <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">Turn off Plain Mode to enable</p>
                     </div>
                 </div>
@@ -1726,7 +1726,7 @@
 
             <!-- 2. DISPLAY -->
             <div class="menu-section">
-                <h3>ð¨ Display</h3>
+                <h3>🎨 Display</h3>
                 <div class="menu-item">
                     <label>Dark Mode</label>
                     <div class="toggle">
@@ -1738,7 +1738,7 @@
 
             <!-- 3. SOUND -->
             <div class="menu-section">
-                <h3>ð Sound</h3>
+                <h3>🔊 Sound</h3>
                 <div class="menu-item">
                     <label>Sound Effects</label>
                     <div class="toggle">
@@ -1746,12 +1746,12 @@
                         <span class="toggle-slider"></span>
                     </div>
                 </div>
-                <button class="btn" onclick="testSounds()" style="width: 100%; background: var(--bg-tertiary); font-size: 0.85rem; margin-top: 8px;">ð Test Sounds</button>
+                <button class="btn" onclick="testSounds()" style="width: 100%; background: var(--bg-tertiary); font-size: 0.85rem; margin-top: 8px;">🔊 Test Sounds</button>
             </div>
 
             <!-- 4. TUTORIAL -->
             <div class="menu-section">
-                <h3>ð Tutorial</h3>
+                <h3>📖 Tutorial</h3>
                 <div class="menu-item">
                     <label>Show on First Visit</label>
                     <div class="toggle">
@@ -1759,19 +1759,19 @@
                         <span class="toggle-slider"></span>
                     </div>
                 </div>
-                <button class="btn" onclick="replayTutorial()" style="width: 100%; background: var(--bg-tertiary); margin-top: 8px;">ð Replay Tutorial</button>
+                <button class="btn" onclick="replayTutorial()" style="width: 100%; background: var(--bg-tertiary); margin-top: 8px;">🎓 Replay Tutorial</button>
             </div>
 
             <!-- 5. PRACTICE MODE -->
             <div class="menu-section">
-                <h3>ð Practice Mode</h3>
+                <h3>📅 Practice Mode</h3>
                 <p class="setting-desc">Play any past puzzle! Stats tracked separately.</p>
                 <button class="btn btn-primary" onclick="openPracticeModal()" style="width: 100%;">Browse Past Puzzles</button>
             </div>
 
             <!-- 5.5. PLAIN MODE -->
             <div class="menu-section">
-                <h3>ð Plain Mode</h3>
+                <h3>📋 Plain Mode</h3>
                 <div class="menu-item">
                     <div>
                         <label>Plain Mode</label>
@@ -1786,7 +1786,7 @@
 
             <!-- 6. STATISTICS -->
             <div class="menu-section">
-                <h3>ð Statistics</h3>
+                <h3>📊 Statistics</h3>
                 <div class="streak-display">
                     <div class="streak-item">
                         <div class="streak-value fire" id="current-streak">0</div>
@@ -1819,12 +1819,12 @@
 
             <!-- 7. HOW TO PLAY -->
             <div class="menu-section">
-                <h3>â How to Play</h3>
+                <h3>❓ How to Play</h3>
                 <div class="about-text">
                     <p>Pair 8 items into 4 matches, then arrange them in the correct sequence on the rungs.</p>
                     <ul style="margin: 10px 0 0 15px; font-size: 0.9rem;">
                         <li>Drag items to form pairs</li>
-                        <li>Stack pairs from least â most</li>
+                        <li>Stack pairs from least → most</li>
                         <li>Submit to check your answer</li>
                     </ul>
                 </div>
@@ -1832,7 +1832,7 @@
 
             <!-- 8. GAME INFO -->
             <div class="menu-section">
-                <h3>â¹ï¸ Game Info</h3>
+                <h3>ℹ️ Game Info</h3>
                 <p><strong>Puzzle #:</strong> <span id="puzzle-number-display">-</span></p>
                 <p><strong>Total Puzzles:</strong> 52</p>
                 <div style="margin-top: 10px; padding: 12px; background: var(--bg-tertiary); border-radius: 10px; text-align: center;">
@@ -1844,13 +1844,13 @@
 
             <!-- 9. DATA -->
             <div class="menu-section">
-                <h3>ðï¸ Data</h3>
+                <h3>🗑️ Data</h3>
                 <button class="btn btn-danger" onclick="confirmResetStats()" style="width: 100%;">Reset Statistics</button>
             </div>
 
             <!-- Test Mode Section (hidden in production) -->
             <div class="menu-section" id="test-mode-section">
-                <h3>ð§ª Test Mode</h3>
+                <h3>🧪 Test Mode</h3>
                 <div class="menu-item" style="flex-direction: column; align-items: stretch; gap: 10px;">
                     <label>Select Puzzle:</label>
                     <select id="puzzle-selector" style="padding: 10px; border-radius: 8px; background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); font-size: 0.9rem;">
@@ -1859,7 +1859,7 @@
                     <button class="btn btn-primary" onclick="loadSelectedPuzzle()" style="margin-top: 5px;">Load Puzzle</button>
                 </div>
                 <div class="menu-item" style="margin-top: 10px;">
-                    <button class="btn" onclick="resetTutorialState()" style="width: 100%; background: var(--bg-tertiary); font-size: 0.85rem;">ð Reset First-Time State</button>
+                    <button class="btn" onclick="resetTutorialState()" style="width: 100%; background: var(--bg-tertiary); font-size: 0.85rem;">🔄 Reset First-Time State</button>
                 </div>
             </div>
             
@@ -1898,13 +1898,13 @@
     <div class="modal" id="practice-modal">
         <div class="modal-content" style="max-width: 450px;">
             <button class="close-btn" onclick="closePracticeModal()" style="position: absolute; top: 15px; right: 15px;">&times;</button>
-            <h2 style="color: var(--accent-gold); margin-bottom: 15px;">ð Practice Mode</h2>
+            <h2 style="color: var(--accent-gold); margin-bottom: 15px;">📅 Practice Mode</h2>
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 15px;">Select a past puzzle to play</p>
             
             <div class="date-picker-header">
-                <button class="btn" onclick="changeMonth(-1)" id="prev-month">â</button>
+                <button class="btn" onclick="changeMonth(-1)" id="prev-month">◀</button>
                 <span id="current-month" style="font-weight: 600;">January 2026</span>
-                <button class="btn" onclick="changeMonth(1)" id="next-month">â¶</button>
+                <button class="btn" onclick="changeMonth(1)" id="next-month">▶</button>
             </div>
             
             <div class="date-picker-grid" id="date-picker-grid">
@@ -1939,7 +1939,7 @@
     <!-- Reset Confirmation Modal -->
     <div class="modal" id="reset-modal">
         <div class="modal-content" style="max-width: 400px; text-align: center;">
-            <h2 style="color: var(--accent-error); margin-bottom: 15px;">â ï¸ Reset Statistics?</h2>
+            <h2 style="color: var(--accent-error); margin-bottom: 15px;">⚠️ Reset Statistics?</h2>
             <p style="margin-bottom: 20px;">This will clear all your game statistics. This action cannot be undone.</p>
             <div style="display: flex; gap: 10px; justify-content: center;">
                 <button class="btn" onclick="closeResetModal()" style="background: var(--bg-tertiary);">Cancel</button>
@@ -1952,7 +1952,7 @@
     <!-- Tutorial Choice Modal (first-time players) -->
     <div class="modal" id="tutorial-choice-modal">
         <div class="modal-content" style="max-width: 420px;">
-            <h2 style="color: var(--accent-gold); margin-bottom: 15px;">ð Welcome to Rungs!</h2>
+            <h2 style="color: var(--accent-gold); margin-bottom: 15px;">👋 Welcome to Rungs!</h2>
             
             <div class="about-text" style="text-align: left;">
                 <p>Pair words into concepts, then arrange them in order from <strong>least to most</strong>.</p>
@@ -1962,12 +1962,12 @@
             
             <div style="margin-top: 25px; display: flex; flex-direction: column; gap: 12px;">
                 <button class="btn btn-primary" onclick="startTutorial()" style="width: 100%; padding: 15px;">
-                    ð Yes, show me how to play<br>
+                    🎓 Yes, show me how to play<br>
                     <span style="font-size: 0.8rem; opacity: 0.8;">(Practice puzzle - won't count)</span>
                 </button>
                 
                 <button class="btn" onclick="skipTutorial()" style="width: 100%; padding: 15px; background: var(--bg-hover);">
-                    ð I know the rules, let's go!<br>
+                    🚀 I know the rules, let's go!<br>
                     <span style="font-size: 0.8rem; opacity: 0.8;">(Start today's puzzle)</span>
                 </button>
             </div>
@@ -2013,25 +2013,25 @@
                         <div style="display: flex; flex-direction: column; gap: 6px;">
                             <div style="background: var(--bg-hover); padding: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
                                 <span>4. RIVER & FLOW</span>
-                                <span style="color: var(--text-muted);">â² â¼</span>
+                                <span style="color: var(--text-muted);">▲ ▼</span>
                             </div>
                             <div style="background: var(--bg-hover); padding: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
                                 <span>3. RAIN & FALL</span>
-                                <span style="color: var(--text-muted);">â² â¼</span>
+                                <span style="color: var(--text-muted);">▲ ▼</span>
                             </div>
                             <div style="background: var(--bg-hover); padding: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
                                 <span>2. CLOUD & FORM</span>
-                                <span style="color: var(--text-muted);">â² â¼</span>
+                                <span style="color: var(--text-muted);">▲ ▼</span>
                             </div>
                             <div style="background: var(--bg-hover); padding: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
                                 <span>1. OCEAN & HEAT</span>
-                                <span style="color: var(--text-muted);">â² â¼</span>
+                                <span style="color: var(--text-muted);">▲ ▼</span>
                             </div>
                         </div>
                     </div>
-                    <p>Once placed, use the <strong>â² â¼ arrows</strong> to reorder pairs.</p>
+                    <p>Once placed, use the <strong>▲ ▼ arrows</strong> to reorder pairs.</p>
                     <p style="margin-top: 10px; padding: 10px; background: var(--bg-tertiary); border-radius: 8px;">
-                        <strong style="color: var(--accent-gold);">ð Key Rule:</strong> Order goes from <strong>least to most</strong> â smallestâlargest, firstâlast, startâfinish.
+                        <strong style="color: var(--accent-gold);">📏 Key Rule:</strong> Order goes from <strong>least to most</strong> — smallest→largest, first→last, start→finish.
                     </p>
                 </div>
             </div>
@@ -2045,19 +2045,19 @@
                         <div style="display: flex; flex-direction: column; gap: 6px;">
                             <div style="display: flex; justify-content: space-between;">
                                 <span>1. OCEAN & HEAT</span>
-                                <span style="color: var(--accent-success);">â</span>
+                                <span style="color: var(--accent-success);">✓</span>
                             </div>
                             <div style="display: flex; justify-content: space-between;">
                                 <span>2. CLOUD & RAIN</span>
-                                <span style="color: var(--accent-error);">â</span>
+                                <span style="color: var(--accent-error);">✗</span>
                             </div>
                             <div style="display: flex; justify-content: space-between;">
                                 <span>3. FORM & FALL</span>
-                                <span style="color: var(--accent-error);">â</span>
+                                <span style="color: var(--accent-error);">✗</span>
                             </div>
                             <div style="display: flex; justify-content: space-between;">
                                 <span>4. RIVER & FLOW</span>
-                                <span style="color: var(--accent-success);">â</span>
+                                <span style="color: var(--accent-success);">✓</span>
                             </div>
                         </div>
                     </div>
@@ -2065,15 +2065,15 @@
                     <div style="background: var(--bg-tertiary); padding: 12px; border-radius: 12px; margin-bottom: 15px; font-size: 0.9rem;">
                         <div style="display: flex; flex-direction: column; gap: 6px;">
                             <div style="display: flex; justify-content: space-between;">
-                                <span>All pairs: â â â â</span>
+                                <span>All pairs: ✓ ✓ ✓ ✓</span>
                             </div>
                             <div style="display: flex; justify-content: space-between;">
-                                <span>Order: <span style="color: var(--accent-success);">â</span> <span style="color: var(--accent-error);">â</span> <span style="color: var(--accent-error);">â</span> <span style="color: var(--accent-success);">â</span></span>
-                                <span style="color: var(--text-muted);">swap 2â3</span>
+                                <span>Order: <span style="color: var(--accent-success);">✓</span> <span style="color: var(--accent-error);">✗</span> <span style="color: var(--accent-error);">✗</span> <span style="color: var(--accent-success);">✓</span></span>
+                                <span style="color: var(--text-muted);">swap 2↔3</span>
                             </div>
                         </div>
                     </div>
-                    <p>Wrong pairs always come in twos â if CLOUD+RAIN is wrong, the orphaned FORM and FALL must pair together (also wrong).</p>
+                    <p>Wrong pairs always come in twos — if CLOUD+RAIN is wrong, the orphaned FORM and FALL must pair together (also wrong).</p>
                     <p style="margin-top: 10px;">You have <strong>4 attempts</strong> to solve each puzzle!</p>
                 </div>
             </div>
@@ -2083,11 +2083,11 @@
                 <h2 style="color: var(--accent-gold); margin-bottom: 15px;">Step 4: Victory!</h2>
                 <div class="about-text" style="text-align: left;">
                     <div style="background: var(--bg-tertiary); padding: 15px; border-radius: 12px; margin-bottom: 15px; text-align: center;">
-                        <div style="font-size: 2rem; margin-bottom: 10px;">ð</div>
+                        <div style="font-size: 2rem; margin-bottom: 10px;">🎉</div>
                         <div style="color: var(--accent-success); font-weight: bold;">Victory!</div>
                         <div style="margin-top: 8px; color: var(--text-secondary);">The stack was: <strong style="color: var(--accent-gold);">Water Cycle</strong></div>
                         <div style="margin-top: 12px;">
-                            <span style="background: var(--bg-hover); padding: 6px 12px; border-radius: 6px; font-size: 0.9rem;">ð Tell me more</span>
+                            <span style="background: var(--bg-hover); padding: 6px 12px; border-radius: 6px; font-size: 0.9rem;">📖 Tell me more</span>
                         </div>
                     </div>
                     <p>When you win, the <strong>theme is revealed</strong> along with an explanation.</p>
@@ -2098,8 +2098,8 @@
             
             <!-- Navigation buttons -->
             <div style="margin-top: 25px; display: flex; gap: 12px;">
-                <button class="btn" id="tutorial-prev-btn" onclick="prevTutorialStep()" style="flex: 1; background: var(--bg-hover); display: none;">â Back</button>
-                <button class="btn btn-primary" id="tutorial-next-btn" onclick="nextTutorialStep()" style="flex: 1;">Next â</button>
+                <button class="btn" id="tutorial-prev-btn" onclick="prevTutorialStep()" style="flex: 1; background: var(--bg-hover); display: none;">← Back</button>
+                <button class="btn btn-primary" id="tutorial-next-btn" onclick="nextTutorialStep()" style="flex: 1;">Next →</button>
             </div>
             <button class="btn" onclick="exitTutorialWalkthrough()" style="width: 100%; margin-top: 10px; background: transparent; color: var(--text-muted);">Skip tutorial</button>
         </div>
@@ -2116,16 +2116,16 @@
                 
                 <p><strong>Step 2:</strong> Tap <strong>Place</strong> to add the pair</p>
                 
-                <p><strong>Step 3:</strong> Order the pairs using â²â¼ buttons</p>
+                <p><strong>Step 3:</strong> Order the pairs using ▲▼ buttons</p>
                 
                 <p><strong>Step 4:</strong> Tap <strong>Submit</strong> when ready</p>
                 
                 <p style="margin-top: 15px; padding: 10px; background: var(--bg-tertiary); border-radius: 8px;">
-                    <strong style="color: var(--accent-gold);">ð Order Rule:</strong> Rungs always go from <strong>least to most</strong> â smallerâlarger, earlierâlater, startâfinish.
+                    <strong style="color: var(--accent-gold);">📏 Order Rule:</strong> Rungs always go from <strong>least to most</strong> — smaller→larger, earlier→later, start→finish.
                 </p>
                 
                 <p style="margin-top: 10px; padding: 10px; background: var(--bg-tertiary); border-radius: 8px;">
-                    <strong style="color: var(--accent-gold);">ð¡ Tip:</strong> In Easy Mode, the theme is revealed after 2 attempts. In Hard Mode, it stays hidden!
+                    <strong style="color: var(--accent-gold);">💡 Tip:</strong> In Easy Mode, the theme is revealed after 2 attempts. In Hard Mode, it stays hidden!
                 </p>
             </div>
             
@@ -2158,7 +2158,7 @@
                     this.gameId = gameId;
                     this.gameConfig = {
                         name: config.name || gameId,
-                        icon: config.icon || 'ð®',
+                        icon: config.icon || '🎮',
                         url: config.url || window.location.hostname,
                         version: config.version || '1.0.3',
                         type: config.type || 'daily',
@@ -2166,7 +2166,7 @@
                     };
                     this._initialized = true;
                     this._announcePresence();
-                    console.log(`ð® Game Shelf Integration initialized for ${this.gameConfig.name}`);
+                    console.log(`🎮 Game Shelf Integration initialized for ${this.gameConfig.name}`);
                 },
                 
                 reportComplete: function(result) {
@@ -2262,14 +2262,14 @@
             pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
             order: [0, 1, 2, 3],
             stackName: 'Water Cycle (Tutorial)',
-            explanation: 'OCEAN+HEAT (sun evaporates water) â CLOUD+FORM (vapor condenses) â RAIN+FALL (precipitation) â RIVER+FLOW (water returns to sea)',
+            explanation: 'OCEAN+HEAT (sun evaporates water) → CLOUD+FORM (vapor condenses) → RAIN+FALL (precipitation) → RIVER+FLOW (water returns to sea)',
             decoys: ['Weather', 'Geography', 'Seasons'],
             detailedExplanation: `<h4>The Hydrological Cycle</h4> <table> <tr><th>Step</th><th>Pair</th><th>Scientific Process</th></tr> <tr><td>1. Evaporation</td><td>OCEAN + HEAT</td><td>Sun heats ocean water, turning it to vapor</td></tr> <tr><td>2. Condensation</td><td>CLOUD + FORM</td><td>Water vapor cools and forms clouds</td></tr> <tr><td>3. Precipitation</td><td>RAIN + FALL</td><td>Water falls back to earth as rain</td></tr> <tr><td>4. Collection</td><td>RIVER + FLOW</td><td>Water flows back toward the ocean</td></tr> </table> <p>This is the continuous cycle that circulates water through Earth's systems.</p>`,
             difficulty: 'tutorial',
             solveTime: '1 min'
         };
 
-        const PUZZLES = [// Puzzle 1: Building Wealth (poorest â richest)
+        const PUZZLES = [// Puzzle 1: Building Wealth (poorest → richest)
             {
                 items: [
                     { id: 1, display: 'SPARE', type: 'text' },
@@ -2281,17 +2281,17 @@
                     { id: 7, display: 'TRUST', type: 'text' },
                     { id: 8, display: 'FUND', type: 'text' }
                 ],
-                // SPARE+CHANGE (coins) â PIGGY+BANK (saving) â STOCK+BROKER (investing) â TRUST+FUND (wealthy)
+                // SPARE+CHANGE (coins) → PIGGY+BANK (saving) → STOCK+BROKER (investing) → TRUST+FUND (wealthy)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Building Wealth',
-                explanation: 'SPARE+CHANGE (pocket coins) â PIGGY+BANK (modest savings) â STOCK+BROKER (investments) â TRUST+FUND (generational wealth)',
+                explanation: 'SPARE+CHANGE (pocket coins) → PIGGY+BANK (modest savings) → STOCK+BROKER (investments) → TRUST+FUND (generational wealth)',
                 decoys: ['Banking', 'Wall Street', 'Money Terms'],
                 detailedExplanation: `<h4>Financial Growth Stages</h4> <table> <tr><th>Stage</th><th>Pair</th><th>What It Represents</th></tr> <tr><td>1. Broke</td><td>SPARE + CHANGE</td><td>Pocket coins, living paycheck to paycheck</td></tr> <tr><td>2. Saving</td><td>PIGGY + BANK</td><td>Starting to save small amounts</td></tr> <tr><td>3. Investing</td><td>STOCK + BROKER</td><td>Growing wealth through investments</td></tr> <tr><td>4. Wealthy</td><td>TRUST + FUND</td><td>Generational wealth, money manages itself</td></tr> </table> <p>The progression follows how people typically build wealth over a lifetime.</p>`,
                 difficulty: 'medium',
                 solveTime: '1-2 min'
             },
-            // Puzzle 2: Career Ladder (entry â executive)
+            // Puzzle 2: Career Ladder (entry → executive)
             {
                 items: [
                     { id: 1, display: 'HELP', type: 'text' },
@@ -2303,12 +2303,12 @@
                     { id: 7, display: 'BOARD', type: 'text' },
                     { id: 8, display: 'CHAIR', type: 'text' }
                 ],
-                // HELP+WANTED (seeking) â TEMP+WORK (entry) â CORNER+OFFICE (manager) â BOARD+CHAIR (executive)
+                // HELP+WANTED (seeking) → TEMP+WORK (entry) → CORNER+OFFICE (manager) → BOARD+CHAIR (executive)
                 // Red herring: OFFICE+CHAIR (furniture) - tempting but wrong!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Career Ladder',
-                explanation: 'HELP+WANTED (job hunting) â TEMP+WORK (starting out) â CORNER+OFFICE (management) â BOARD+CHAIR (chairman)',
+                explanation: 'HELP+WANTED (job hunting) → TEMP+WORK (starting out) → CORNER+OFFICE (management) → BOARD+CHAIR (chairman)',
                 decoys: ['Office Chair', 'Furniture', 'Signs'],
                 detailedExplanation: `<h4>Professional Advancement</h4> <table> <tr><th>Level</th><th>Pair</th><th>Career Stage</th></tr> <tr><td>1. Job Seeker</td><td>HELP + WANTED</td><td>Looking for employment</td></tr> <tr><td>2. Entry Level</td><td>TEMP + WORK</td><td>First job, often temporary or contract</td></tr> <tr><td>3. Management</td><td>CORNER + OFFICE</td><td>Promoted to manager with prime office</td></tr> <tr><td>4. Executive</td><td>BOARD + CHAIR</td><td>Chairman of the board</td></tr> </table> <p>Tricky: OFFICE+CHAIR (furniture) is tempting, but CORNER+OFFICE represents management and BOARD+CHAIR means chairman!</p>`,
                 difficulty: 'medium',
@@ -2331,7 +2331,7 @@
                 order: [0, 1, 2, 3],
                 stackName: 'Computing Evolution',
                 puzzleType: 'chain',
-                explanation: 'Computing got smaller: punch card (1950s) â mainframe (1960s) â notebook (1990s) â smartwatch (2010s)',
+                explanation: 'Computing got smaller: punch card (1950s) → mainframe (1960s) → notebook (1990s) → smartwatch (2010s)',
                 decoys: ['Office Supplies', 'Library', 'Jewelry'],
                 difficulty: 'hard',
                 solveTime: '2-3 min',
@@ -2359,12 +2359,12 @@
                     { id: 7, display: 'BUTTER', type: 'text' },
                     { id: 8, display: 'SLICE', type: 'text' }
                 ],
-                // FLOUR+WATER (mix) â YEAST+BUBBLE (rise) â OVEN+BROWN (bake) â BUTTER+SLICE (serve)
+                // FLOUR+WATER (mix) → YEAST+BUBBLE (rise) → OVEN+BROWN (bake) → BUTTER+SLICE (serve)
                 // Red herring: BROWN+BUTTER (brown butter is a real culinary technique!)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Making Bread',
-                explanation: 'FLOUR+WATER (mix dough) â YEAST+BUBBLE (dough rises) â OVEN+BROWN (bake it) â BUTTER+SLICE (serve and eat)',
+                explanation: 'FLOUR+WATER (mix dough) → YEAST+BUBBLE (dough rises) → OVEN+BROWN (bake it) → BUTTER+SLICE (serve and eat)',
                 decoys: ['Brown Butter', 'Baking', 'Kitchen'],
                 detailedExplanation: `<h4>Bread Baking Process</h4> <table> <tr><th>Step</th><th>Pair</th><th>What Happens</th></tr> <tr><td>1. Mix</td><td>FLOUR + WATER</td><td>Combine basic ingredients into dough</td></tr> <tr><td>2. Rise</td><td>YEAST + BUBBLE</td><td>Yeast ferments, creating gas bubbles</td></tr> <tr><td>3. Bake</td><td>OVEN + BROWN</td><td>Heat transforms dough into bread</td></tr> <tr><td>4. Serve</td><td>BUTTER + SLICE</td><td>Cut and serve with butter</td></tr> </table> <p>Tricky: BROWN+BUTTER is a real cooking technique (butter cooked until browned), but here OVEN+BROWN represents baking and BUTTER+SLICE is serving!</p>`,
                 difficulty: 'medium',
@@ -2382,17 +2382,17 @@
                     { id: 7, display: 'BIRD', type: 'text' },
                     { id: 8, display: 'SING', type: 'text' }
                 ],
-                // STILL+AIR (calm) â DARK+SKY (clouds) â FLASH+BOOM (storm) â BIRD+SING (clear)
+                // STILL+AIR (calm) → DARK+SKY (clouds) → FLASH+BOOM (storm) → BIRD+SING (clear)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'A Thunderstorm',
-                explanation: 'STILL+AIR (calm before storm) â DARK+SKY (clouds roll in) â FLASH+BOOM (lightning and thunder) â BIRD+SING (storm passes)',
+                explanation: 'STILL+AIR (calm before storm) → DARK+SKY (clouds roll in) → FLASH+BOOM (lightning and thunder) → BIRD+SING (storm passes)',
                 decoys: ['Weather', 'Nature', 'Seasons'],
                 detailedExplanation: `<h4>Storm Development Stages</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Weather Condition</th></tr> <tr><td>1. Calm</td><td>STILL + AIR</td><td>Eerie quiet before the storm</td></tr> <tr><td>2. Building</td><td>DARK + SKY</td><td>Clouds gathering, sky darkening</td></tr> <tr><td>3. Storm</td><td>FLASH + BOOM</td><td>Lightning and thunder</td></tr> <tr><td>4. Clearing</td><td>BIRD + SING</td><td>Storm passes, nature resumes</td></tr> </table> <p>The classic progression of a summer thunderstorm.</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 6: Feeling Sick (minor â critical)
+            // Puzzle 6: Feeling Sick (minor → critical)
             {
                 items: [
                     { id: 1, display: 'RUNNY', type: 'text' },
@@ -2404,11 +2404,11 @@
                     { id: 7, display: 'LIFE', type: 'text' },
                     { id: 8, display: 'SUPPORT', type: 'text' }
                 ],
-                // RUNNY+NOSE (cold) â SICK+DAY (miss work) â BED+REST (serious) â LIFE+SUPPORT (critical)
+                // RUNNY+NOSE (cold) → SICK+DAY (miss work) → BED+REST (serious) → LIFE+SUPPORT (critical)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Feeling Sick',
-                explanation: 'RUNNY+NOSE (minor cold) â SICK+DAY (stay home) â BED+REST (serious illness) â LIFE+SUPPORT (critical)',
+                explanation: 'RUNNY+NOSE (minor cold) → SICK+DAY (stay home) → BED+REST (serious illness) → LIFE+SUPPORT (critical)',
                 decoys: ['Body Parts', 'Sleep', 'Medical'],
                 detailedExplanation: `<h4>Illness Severity Scale</h4> <table> <tr><th>Severity</th><th>Pair</th><th>Condition</th></tr> <tr><td>1. Minor</td><td>RUNNY + NOSE</td><td>Common cold symptoms, still functional</td></tr> <tr><td>2. Moderate</td><td>SICK + DAY</td><td>Bad enough to miss work</td></tr> <tr><td>3. Serious</td><td>BED + REST</td><td>Doctor-ordered rest, can't do much</td></tr> <tr><td>4. Critical</td><td>LIFE + SUPPORT</td><td>Hospital ICU, fighting for life</td></tr> </table> <p>From "push through it" to "call 911" - a progression nobody wants to experience.</p>`,
                 difficulty: 'medium',
@@ -2431,7 +2431,7 @@
                 order: [0, 1, 2, 3],
                 stackName: 'Growing Up',
                 puzzleType: 'chain',
-                explanation: 'Life stages: playpen (baby) â sandbox (toddler) â backpack (student) â briefcase (professional)',
+                explanation: 'Life stages: playpen (baby) → sandbox (toddler) → backpack (student) → briefcase (professional)',
                 decoys: ['Childhood', 'Education', 'Business'],
             detailedExplanation: `<h4>Life Stages by Container</h4> <table> <tr><th>Age</th><th>Pair</th><th>What You Carry</th></tr> <tr><td>0-1</td><td>PLAY + PEN</td><td>Baby - contained for safety</td></tr> <tr><td>2-5</td><td>SAND + BOX</td><td>Toddler - outdoor play</td></tr> <tr><td>6-18</td><td>BACK + PACK</td><td>Student - books and homework</td></tr> <tr><td>Adult</td><td>BRIEF + CASE</td><td>Professional - work documents</td></tr> </table> <p>What you carry changes as you grow.</p>`,
                 difficulty: 'hard',
@@ -2449,12 +2449,12 @@
                     { id: 7, display: 'SUN', type: 'text' },
                     { id: 8, display: 'SET', type: 'text' }
                 ],
-                // CAR+PARK (arrive) â WAVE+POOL (swim) â TOWEL+DRY (rest) â SUN+SET (leave)
+                // CAR+PARK (arrive) → WAVE+POOL (swim) → TOWEL+DRY (rest) → SUN+SET (leave)
                 // Red herring: CAR+POOL (carpool) - tempting but wrong!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Day at the Beach',
-                explanation: 'CAR+PARK (arrive at beach) â WAVE+POOL (go swimming) â TOWEL+DRY (dry off) â SUN+SET (time to go home)',
+                explanation: 'CAR+PARK (arrive at beach) → WAVE+POOL (go swimming) → TOWEL+DRY (dry off) → SUN+SET (time to go home)',
                 decoys: ['Carpooling', 'Summer', 'Vacation'],
                 detailedExplanation: `<h4>Beach Day Timeline</h4> <table> <tr><th>Time</th><th>Pair</th><th>Activity</th></tr> <tr><td>Morning</td><td>CAR + PARK</td><td>Arrive and find parking</td></tr> <tr><td>Midday</td><td>WAVE + POOL</td><td>Swimming in the wave pool</td></tr> <tr><td>Afternoon</td><td>TOWEL + DRY</td><td>Dry off on the beach</td></tr> <tr><td>Evening</td><td>SUN + SET</td><td>Watch sunset, head home</td></tr> </table> <p>Tricky: CAR+POOL (carpool) is tempting, but WAVE+POOL fits the beach theme!</p>`,
                 difficulty: 'medium',
@@ -2472,18 +2472,18 @@
                     { id: 7, display: 'WARM', type: 'text' },
                     { id: 8, display: 'SMILE', type: 'text' }
                 ],
-                // COLD+SWEAT (nervous) â IRON+SHIRT (dressed up) â NEW+FACE (strangers) â WARM+SMILE (welcomed)
+                // COLD+SWEAT (nervous) → IRON+SHIRT (dressed up) → NEW+FACE (strangers) → WARM+SMILE (welcomed)
                 // Red herring: SWEAT+SHIRT (sweatshirt) - very tempting!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'First Day of School',
-                explanation: 'COLD+SWEAT (nervous) â IRON+SHIRT (dressed sharp) â NEW+FACE (meeting strangers) â WARM+SMILE (feeling welcomed)',
+                explanation: 'COLD+SWEAT (nervous) → IRON+SHIRT (dressed sharp) → NEW+FACE (meeting strangers) → WARM+SMILE (feeling welcomed)',
                 decoys: ['Sweatshirt', 'Clothing', 'Emotions'],
                 detailedExplanation: `<h4>First Day Emotions</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Feeling</th></tr> <tr><td>1. Nervous</td><td>COLD + SWEAT</td><td>Anxiety before the big day</td></tr> <tr><td>2. Prepared</td><td>IRON + SHIRT</td><td>Looking sharp in pressed clothes</td></tr> <tr><td>3. Uncertain</td><td>NEW + FACE</td><td>Surrounded by strangers</td></tr> <tr><td>4. Welcomed</td><td>WARM + SMILE</td><td>Making friends, feeling accepted</td></tr> </table> <p>Tricky: SWEAT+SHIRT (sweatshirt) is tempting, but that orphans IRON!</p>`,
                 difficulty: 'medium',
                 solveTime: '2-3 min'
             },
-            // Puzzle 10: Buying a House (looking â owning)
+            // Puzzle 10: Buying a House (looking → owning)
             {
                 items: [
                     { id: 1, display: 'WINDOW', type: 'text' },
@@ -2495,11 +2495,11 @@
                     { id: 7, display: 'MOVE', type: 'text' },
                     { id: 8, display: 'IN', type: 'text' }
                 ],
-                // WINDOW+SHOP (browsing) â OPEN+DOOR (viewing) â CLOSING+COST (buying) â MOVE+IN (owning)
+                // WINDOW+SHOP (browsing) → OPEN+DOOR (viewing) → CLOSING+COST (buying) → MOVE+IN (owning)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Buying a House',
-                explanation: 'WINDOW+SHOP (browsing listings) â OPEN+DOOR (touring homes) â CLOSING+COST (purchase fees) â MOVE+IN (ownership)',
+                explanation: 'WINDOW+SHOP (browsing listings) → OPEN+DOOR (touring homes) → CLOSING+COST (purchase fees) → MOVE+IN (ownership)',
                 decoys: ['Real Estate', 'Shopping', 'Home'],
                 detailedExplanation: `<h4>Home Buying Journey</h4> <table> <tr><th>Phase</th><th>Pair</th><th>Activity</th></tr> <tr><td>1. Dreaming</td><td>WINDOW + SHOP</td><td>Browsing listings online, imagining</td></tr> <tr><td>2. Touring</td><td>OPEN + DOOR</td><td>Visiting open houses, seeing properties</td></tr> <tr><td>3. Purchasing</td><td>CLOSING + COST</td><td>Finalizing the sale, paying fees</td></tr> <tr><td>4. Owning</td><td>MOVE + IN</td><td>Keys in hand, it's yours!</td></tr> </table> <p>The exciting (and stressful) path to homeownership.</p>`,
                 difficulty: 'medium',
@@ -2521,7 +2521,7 @@
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Shortest to Longest Trip',
-                explanation: 'Travel distance: a few blocks â around town â cross country â around the world',
+                explanation: 'Travel distance: a few blocks → around town → cross country → around the world',
                 decoys: ['Transportation', 'Vacation Types', 'Music Events'],
             detailedExplanation: `<h4>Travel Distances</h4> <table> <tr><th>Duration</th><th>Pair</th><th>Trip Type</th></tr> <tr><td>Minutes</td><td>SIDE + WALK</td><td>Walking nearby</td></tr> <tr><td>Hours</td><td>JOY + RIDE</td><td>Casual drive for fun</td></tr> <tr><td>Days</td><td>ROAD + TRIP</td><td>Multi-day driving adventure</td></tr> <tr><td>Weeks</td><td>WORLD + TOUR</td><td>Global travel experience</td></tr> </table> <p>From a stroll to circumnavigating the globe.</p>`,
                 difficulty: 'hard',
@@ -2539,12 +2539,12 @@
                     { id: 7, display: 'BASKET', type: 'text' },
                     { id: 8, display: 'FULL', type: 'text' }
                 ],
-                // SHOVEL+DIRT (dig) â SEED+BED (plant) â HOSE+SPRAY (water) â BASKET+FULL (harvest)
+                // SHOVEL+DIRT (dig) → SEED+BED (plant) → HOSE+SPRAY (water) → BASKET+FULL (harvest)
                 // Red herring: DIRT+BED (garden bed) - tempting but orphans SHOVEL!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Planting a Garden',
-                explanation: 'SHOVEL+DIRT (prepare soil) â SEED+BED (plant in seedbed) â HOSE+SPRAY (water daily) â BASKET+FULL (harvest crops)',
+                explanation: 'SHOVEL+DIRT (prepare soil) → SEED+BED (plant in seedbed) → HOSE+SPRAY (water daily) → BASKET+FULL (harvest crops)',
                 decoys: ['Dirt Bed', 'Farming', 'Outdoors'],
                 detailedExplanation: `<h4>Garden Growing Seasons</h4> <table> <tr><th>Season</th><th>Pair</th><th>Activity</th></tr> <tr><td>Early Spring</td><td>SHOVEL + DIRT</td><td>Prepare the soil</td></tr> <tr><td>Spring</td><td>SEED + BED</td><td>Plant seeds in the seedbed</td></tr> <tr><td>Summer</td><td>HOSE + SPRAY</td><td>Water regularly</td></tr> <tr><td>Fall</td><td>BASKET + FULL</td><td>Harvest the crops</td></tr> </table> <p>Tricky: DIRT+BED (garden bed) is tempting, but that orphans SHOVEL! SHOVEL+DIRT means preparing soil.</p>`,
                 difficulty: 'medium',
@@ -2562,18 +2562,18 @@
                     { id: 7, display: 'FEED', type: 'text' },
                     { id: 8, display: 'WELL', type: 'text' }
                 ],
-                // YOLK+BREAK (crack egg) â SUNNY+SIDE (style) â MAIN+DISH (entrÃ©e) â FEED+WELL (nourish)
+                // YOLK+BREAK (crack egg) → SUNNY+SIDE (style) → MAIN+DISH (entrée) → FEED+WELL (nourish)
                 // Red herring: SIDE+DISH (side dish) - very tempting!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Cooking an Egg',
-                explanation: 'YOLK+BREAK (crack the egg) â SUNNY+SIDE (sunny side up) â MAIN+DISH (it\'s the entrÃ©e) â FEED+WELL (nourish yourself)',
+                explanation: 'YOLK+BREAK (crack the egg) → SUNNY+SIDE (sunny side up) → MAIN+DISH (it\'s the entrée) → FEED+WELL (nourish yourself)',
                 decoys: ['Side Dish', 'Breakfast', 'Kitchen'],
                 detailedExplanation: `<h4>Breakfast Experience</h4> <table> <tr><th>Step</th><th>Pair</th><th>Meaning</th></tr> <tr><td>1. Prep</td><td>YOLK + BREAK</td><td>Crack the egg, break the yolk</td></tr> <tr><td>2. Style</td><td>SUNNY + SIDE</td><td>Cook it sunny side up</td></tr> <tr><td>3. Serve</td><td>MAIN + DISH</td><td>Eggs are the main dish</td></tr> <tr><td>4. Enjoy</td><td>FEED + WELL</td><td>Nourish yourself</td></tr> </table> <p>Tricky: SIDE+DISH (side dish) is tempting, but that orphans SUNNY!</p>`,
                 difficulty: 'medium',
                 solveTime: '2-3 min'
             },
-            // Puzzle 14: Growing Noise (quiet â deafening)
+            // Puzzle 14: Growing Noise (quiet → deafening)
             {
                 items: [
                     { id: 1, display: 'PIN', type: 'text' },
@@ -2585,11 +2585,11 @@
                     { id: 7, display: 'SONIC', type: 'text' },
                     { id: 8, display: 'BOOM', type: 'text' }
                 ],
-                // PIN+DROP (silent) â WHISPER+SOFT (quiet) â ALARM+BELL (loud) â SONIC+BOOM (deafening)
+                // PIN+DROP (silent) → WHISPER+SOFT (quiet) → ALARM+BELL (loud) → SONIC+BOOM (deafening)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Growing Noise',
-                explanation: 'PIN+DROP (near silence) â WHISPER+SOFT (quiet) â ALARM+BELL (loud) â SONIC+BOOM (deafening)',
+                explanation: 'PIN+DROP (near silence) → WHISPER+SOFT (quiet) → ALARM+BELL (loud) → SONIC+BOOM (deafening)',
                 decoys: ['Sounds', 'Music', 'Aviation'],
                 detailedExplanation: `<h4>Sound Intensity Scale</h4> <table> <tr><th>Level</th><th>Pair</th><th>Decibels</th></tr> <tr><td>1. Silent</td><td>PIN + DROP</td><td>~10 dB - near total silence</td></tr> <tr><td>2. Quiet</td><td>WHISPER + SOFT</td><td>~30 dB - barely audible</td></tr> <tr><td>3. Loud</td><td>ALARM + BELL</td><td>~80 dB - startling</td></tr> <tr><td>4. Deafening</td><td>SONIC + BOOM</td><td>~150 dB - can cause hearing damage</td></tr> </table> <p>From "you could hear a pin drop" to window-shattering sonic booms.</p>`,
                 difficulty: 'medium',
@@ -2603,7 +2603,7 @@
                     { id: 3, display: 'PL', type: 'text' },
                     { id: 4, display: 'VIII', type: 'text' },
                     { id: 5, display: 'CR', type: 'text' },
-                    { id: 6, display: '8ï¸â£', type: 'emoji' },
+                    { id: 6, display: '8️⃣', type: 'emoji' },
                     { id: 7, display: 'ST', type: 'text' },
                     { id: 8, display: 'ATE', type: 'text' }
                 ],
@@ -2611,13 +2611,13 @@
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Smallest to Largest',
-                explanation: 'Size: skate (foot) â plate (dinner) â crate (shipping) â state (geographic)',
+                explanation: 'Size: skate (foot) → plate (dinner) → crate (shipping) → state (geographic)',
                 decoys: ['Rhyming Words', 'Sports', 'Geography'],
-            detailedExplanation: `<h4>GR-8 Word Sizes</h4> <table> <tr><th>Size</th><th>Pair</th><th>Word</th></tr> <tr><td>Foot-sized</td><td>SK + 8</td><td>SKATE - fits on your foot</td></tr> <tr><td>Dinner-sized</td><td>PL + VIII</td><td>PLATE - holds a meal</td></tr> <tr><td>Box-sized</td><td>CR + 8ï¸â£</td><td>CRATE - shipping container</td></tr> <tr><td>Geographic</td><td>ST + ATE</td><td>STATE - entire region</td></tr> </table> <p>All words end in the "ate" sound but vary wildly in size.</p>`,
+            detailedExplanation: `<h4>GR-8 Word Sizes</h4> <table> <tr><th>Size</th><th>Pair</th><th>Word</th></tr> <tr><td>Foot-sized</td><td>SK + 8</td><td>SKATE - fits on your foot</td></tr> <tr><td>Dinner-sized</td><td>PL + VIII</td><td>PLATE - holds a meal</td></tr> <tr><td>Box-sized</td><td>CR + 8️⃣</td><td>CRATE - shipping container</td></tr> <tr><td>Geographic</td><td>ST + ATE</td><td>STATE - entire region</td></tr> </table> <p>All words end in the "ate" sound but vary wildly in size.</p>`,
                 difficulty: 'hard',
                 solveTime: '4-5 min'
             },
-            // Puzzle 16: Making a Movie (concept â theater)
+            // Puzzle 16: Making a Movie (concept → theater)
             {
                 items: [
                     { id: 1, display: 'BRAIN', type: 'text' },
@@ -2629,11 +2629,11 @@
                     { id: 7, display: 'BOX', type: 'text' },
                     { id: 8, display: 'OFFICE', type: 'text' }
                 ],
-                // BRAIN+STORM (idea) â SCREEN+PLAY (script) â FILM+CREW (production) â BOX+OFFICE (release)
+                // BRAIN+STORM (idea) → SCREEN+PLAY (script) → FILM+CREW (production) → BOX+OFFICE (release)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Making a Movie',
-                explanation: 'BRAIN+STORM (generate ideas) â SCREEN+PLAY (write script) â FILM+CREW (shoot movie) â BOX+OFFICE (theatrical release)',
+                explanation: 'BRAIN+STORM (generate ideas) → SCREEN+PLAY (write script) → FILM+CREW (shoot movie) → BOX+OFFICE (theatrical release)',
                 decoys: ['Hollywood', 'Writing', 'Business'],
                 detailedExplanation: `<h4>Film Production Phases</h4> <table> <tr><th>Phase</th><th>Pair</th><th>Industry Term</th></tr> <tr><td>1. Development</td><td>BRAIN + STORM</td><td>Generating and pitching ideas</td></tr> <tr><td>2. Pre-Production</td><td>SCREEN + PLAY</td><td>Writing the script</td></tr> <tr><td>3. Production</td><td>FILM + CREW</td><td>Actually shooting the movie</td></tr> <tr><td>4. Distribution</td><td>BOX + OFFICE</td><td>Theatrical release and revenue</td></tr> </table> <p>Every Hollywood blockbuster follows this path from idea to theater.</p>`,
                 difficulty: 'medium',
@@ -2651,11 +2651,11 @@
                     { id: 7, display: 'NET', type: 'text' },
                     { id: 8, display: 'SCOOP', type: 'text' }
                 ],
-                // ROD+CAST (throw line) â FLOAT+BOB (wait) â LINE+TUG (bite!) â NET+SCOOP (catch)
+                // ROD+CAST (throw line) → FLOAT+BOB (wait) → LINE+TUG (bite!) → NET+SCOOP (catch)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Going Fishing',
-                explanation: 'ROD+CAST (throw out line) â FLOAT+BOB (wait patiently) â LINE+TUG (fish bites!) â NET+SCOOP (land the catch)',
+                explanation: 'ROD+CAST (throw out line) → FLOAT+BOB (wait patiently) → LINE+TUG (fish bites!) → NET+SCOOP (land the catch)',
                 decoys: ['Lake', 'Hobby', 'Outdoors'],
                 detailedExplanation: `<h4>Fishing Sequence</h4> <table> <tr><th>Step</th><th>Pair</th><th>Action</th></tr> <tr><td>1. Cast</td><td>ROD + CAST</td><td>Throw your line into the water</td></tr> <tr><td>2. Wait</td><td>FLOAT + BOB</td><td>Watch the bobber, be patient</td></tr> <tr><td>3. Bite</td><td>LINE + TUG</td><td>Fish takes the bait!</td></tr> <tr><td>4. Catch</td><td>NET + SCOOP</td><td>Land the fish</td></tr> </table> <p>The patient art of fishing, from cast to catch.</p>`,
                 difficulty: 'easy',
@@ -2678,13 +2678,13 @@
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Playing Cards',
-                explanation: 'Poker sequence: shuffle deck â deal hand â side bet â showdown (reveal cards)',
+                explanation: 'Poker sequence: shuffle deck → deal hand → side bet → showdown (reveal cards)',
                 decoys: ['Sideshow', 'Casino', 'Gambling'],
                 detailedExplanation: `<h4>Poker Hand Sequence</h4> <table> <tr><th>Order</th><th>Pair</th><th>Game Action</th></tr> <tr><td>1. Prepare</td><td>SHUFFLE + DECK</td><td>Mix the cards</td></tr> <tr><td>2. Distribute</td><td>DEAL + HAND</td><td>Give cards to players</td></tr> <tr><td>3. Wager</td><td>SIDE + BET</td><td>Additional wager on the side</td></tr> <tr><td>4. Reveal</td><td>SHOW + DOWN</td><td>Players reveal their cards</td></tr> </table> <p>Tricky: SIDE+SHOW (sideshow) is tempting, but SIDE+BET is the poker term!</p>`,
                 difficulty: 'medium',
                 solveTime: '2-3 min'
             },
-            // Puzzle 19: Cooking Meat (raw â done)
+            // Puzzle 19: Cooking Meat (raw → done)
             {
                 items: [
                     { id: 1, display: 'RAW', type: 'text' },
@@ -2696,17 +2696,17 @@
                     { id: 7, display: 'BURNT', type: 'text' },
                     { id: 8, display: 'OUT', type: 'text' }
                 ],
-                // RAW+DEAL (uncooked) â RARE+BIRD (barely cooked) â MEDIUM+WELL (properly done) â BURNT+OUT (overcooked)
+                // RAW+DEAL (uncooked) → RARE+BIRD (barely cooked) → MEDIUM+WELL (properly done) → BURNT+OUT (overcooked)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Cooking Meat',
-                explanation: 'RAW+DEAL (uncooked) â RARE+BIRD (red center) â MEDIUM+WELL (pink) â BURNT+OUT (charred)',
+                explanation: 'RAW+DEAL (uncooked) → RARE+BIRD (red center) → MEDIUM+WELL (pink) → BURNT+OUT (charred)',
                 decoys: ['Card Games', 'Animals', 'Exhaustion'],
-                detailedExplanation: `<h4>Steak Doneness Levels</h4> <table> <tr><th>Level</th><th>Pair</th><th>Internal Temp</th></tr> <tr><td>1. Uncooked</td><td>RAW + DEAL</td><td>Cold, red throughout</td></tr> <tr><td>2. Rare</td><td>RARE + BIRD</td><td>125Â°F - red center, seared outside</td></tr> <tr><td>3. Medium</td><td>MEDIUM + WELL</td><td>150Â°F - pink center</td></tr> <tr><td>4. Overdone</td><td>BURNT + OUT</td><td>Charred, past well-done</td></tr> </table> <p>From tartare to hockey puck - know your temperatures!</p>`,
+                detailedExplanation: `<h4>Steak Doneness Levels</h4> <table> <tr><th>Level</th><th>Pair</th><th>Internal Temp</th></tr> <tr><td>1. Uncooked</td><td>RAW + DEAL</td><td>Cold, red throughout</td></tr> <tr><td>2. Rare</td><td>RARE + BIRD</td><td>125°F - red center, seared outside</td></tr> <tr><td>3. Medium</td><td>MEDIUM + WELL</td><td>150°F - pink center</td></tr> <tr><td>4. Overdone</td><td>BURNT + OUT</td><td>Charred, past well-done</td></tr> </table> <p>From tartare to hockey puck - know your temperatures!</p>`,
                 difficulty: 'hard',
                 solveTime: '4-5 min'
             },
-            // Puzzle 20: Crime and Punishment (minor â major)
+            // Puzzle 20: Crime and Punishment (minor → major)
             {
                 items: [
                     { id: 1, display: 'JAY', type: 'text' },
@@ -2718,11 +2718,11 @@
                     { id: 7, display: 'BANK', type: 'text' },
                     { id: 8, display: 'HEIST', type: 'text' }
                 ],
-                // JAY+WALK (ticket) â SHOP+LIFT (misdemeanor) â CAR+JACK (felony) â BANK+HEIST (major crime)
+                // JAY+WALK (ticket) → SHOP+LIFT (misdemeanor) → CAR+JACK (felony) → BANK+HEIST (major crime)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Crime and Punishment',
-                explanation: 'JAY+WALK (minor ticket) â SHOP+LIFT (misdemeanor) â CAR+JACK (violent felony) â BANK+HEIST (major crime)',
+                explanation: 'JAY+WALK (minor ticket) → SHOP+LIFT (misdemeanor) → CAR+JACK (violent felony) → BANK+HEIST (major crime)',
                 decoys: ['Walking', 'Shopping', 'Cars'],
                 detailedExplanation: `<h4>Escalating Offenses</h4> <table> <tr><th>Severity</th><th>Pair</th><th>Consequence</th></tr> <tr><td>Infraction</td><td>JAY + WALK</td><td>Small fine, no record</td></tr> <tr><td>Misdemeanor</td><td>SHOP + LIFT</td><td>Possible jail time under 1 year</td></tr> <tr><td>Felony</td><td>CAR + JACK</td><td>Serious prison time</td></tr> <tr><td>Major Crime</td><td>BANK + HEIST</td><td>Federal charges, years in prison</td></tr> </table> <p>From a ticket to federal prison - don't start down this path!</p>`,
                 difficulty: 'medium',
@@ -2740,17 +2740,17 @@
                     { id: 7, display: 'STAR', type: 'text' },
                     { id: 8, display: 'FLOAT', type: 'text' }
                 ],
-                // TEN+NINE (countdown) â FLAME+ROAR (ignition) â CLOUD+PIERCE (ascent) â STAR+FLOAT (orbit)
+                // TEN+NINE (countdown) → FLAME+ROAR (ignition) → CLOUD+PIERCE (ascent) → STAR+FLOAT (orbit)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Rocket Launch',
-                explanation: 'TEN+NINE (countdown begins) â FLAME+ROAR (engines ignite) â CLOUD+PIERCE (rocket ascends) â STAR+FLOAT (reach orbit)',
+                explanation: 'TEN+NINE (countdown begins) → FLAME+ROAR (engines ignite) → CLOUD+PIERCE (rocket ascends) → STAR+FLOAT (reach orbit)',
                 decoys: ['Space', 'NASA', 'Science'],
                 detailedExplanation: `<h4>Space Launch Sequence</h4> <table> <tr><th>Phase</th><th>Pair</th><th>What Happens</th></tr> <tr><td>T-10</td><td>TEN + NINE</td><td>Final countdown begins</td></tr> <tr><td>T-0</td><td>FLAME + ROAR</td><td>Engines ignite</td></tr> <tr><td>Ascent</td><td>CLOUD + PIERCE</td><td>Rocket breaks through atmosphere</td></tr> <tr><td>Orbit</td><td>STAR + FLOAT</td><td>Weightlessness achieved in space</td></tr> </table> <p>The dramatic sequence from countdown to orbit!</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 22: Starting a Business (idea â success)
+            // Puzzle 22: Starting a Business (idea → success)
             {
                 items: [
                     { id: 1, display: 'BRAIN', type: 'text' },
@@ -2762,11 +2762,11 @@
                     { id: 7, display: 'PROFIT', type: 'text' },
                     { id: 8, display: 'MARGIN', type: 'text' }
                 ],
-                // BRAIN+CHILD (idea) â BUSINESS+PLAN (planning) â GRAND+OPENING (launch) â PROFIT+MARGIN (success)
+                // BRAIN+CHILD (idea) → BUSINESS+PLAN (planning) → GRAND+OPENING (launch) → PROFIT+MARGIN (success)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Starting a Business',
-                explanation: 'BRAIN+CHILD (the idea) â BUSINESS+PLAN (document it) â GRAND+OPENING (launch day) â PROFIT+MARGIN (making money)',
+                explanation: 'BRAIN+CHILD (the idea) → BUSINESS+PLAN (document it) → GRAND+OPENING (launch day) → PROFIT+MARGIN (making money)',
                 decoys: ['Parenting', 'Events', 'Finance'],
                 detailedExplanation: `<h4>Entrepreneurship Journey</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Milestone</th></tr> <tr><td>1. Ideation</td><td>BRAIN + CHILD</td><td>Your "baby" - the initial concept</td></tr> <tr><td>2. Planning</td><td>BUSINESS + PLAN</td><td>Document strategy for investors</td></tr> <tr><td>3. Launch</td><td>GRAND + OPENING</td><td>Doors open to customers</td></tr> <tr><td>4. Success</td><td>PROFIT + MARGIN</td><td>Actually making money!</td></tr> </table> <p>From napkin sketch to profitable business.</p>`,
                 difficulty: 'medium',
@@ -2788,13 +2788,13 @@
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Worst to Best Hand',
-                explanation: 'Poker rankings: high card â straight â full house â royal flush',
+                explanation: 'Poker rankings: high card → straight → full house → royal flush',
                 decoys: ['Gestures', 'TV Shows', 'Bathroom Terms'],
             detailedExplanation: `<h4>Poker Hand Rankings</h4> <table> <tr><th>Rank</th><th>Pair</th><th>Hand</th></tr> <tr><td>Lowest</td><td>HIGH + FIVE</td><td>High Card (no pairs)</td></tr> <tr><td>Low</td><td>STRAIGHT + EDGE</td><td>Straight (5 in sequence)</td></tr> <tr><td>High</td><td>FULL + HOUSE</td><td>Full House (3 + 2 of a kind)</td></tr> <tr><td>Highest</td><td>ROYAL + FLUSH</td><td>Royal Flush (10-J-Q-K-A suited)</td></tr> </table> <p>Official poker rankings - royal flush beats everything!</p>`,
                 difficulty: 'hard',
                 solveTime: '4-5 min'
             },
-            // Puzzle 24: Relationship Stages (casual â committed)
+            // Puzzle 24: Relationship Stages (casual → committed)
             {
                 items: [
                     { id: 1, display: 'BLIND', type: 'text' },
@@ -2806,11 +2806,11 @@
                     { id: 7, display: 'HONEY', type: 'text' },
                     { id: 8, display: 'MOON', type: 'text' }
                 ],
-                // BLIND+DATE (meeting) â FIRST+KISS (dating) â DIAMOND+RING (engaged) â HONEY+MOON (married)
+                // BLIND+DATE (meeting) → FIRST+KISS (dating) → DIAMOND+RING (engaged) → HONEY+MOON (married)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Relationship Stages',
-                explanation: 'BLIND+DATE (first meeting) â FIRST+KISS (dating) â DIAMOND+RING (engagement) â HONEY+MOON (newlywed)',
+                explanation: 'BLIND+DATE (first meeting) → FIRST+KISS (dating) → DIAMOND+RING (engagement) → HONEY+MOON (newlywed)',
                 decoys: ['Jewelry', 'Calendar', 'Romance Movies'],
                 detailedExplanation: `<h4>Romance Timeline</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Milestone</th></tr> <tr><td>1. Meeting</td><td>BLIND + DATE</td><td>First introduction, nervous energy</td></tr> <tr><td>2. Dating</td><td>FIRST + KISS</td><td>Romance begins</td></tr> <tr><td>3. Engaged</td><td>DIAMOND + RING</td><td>The proposal</td></tr> <tr><td>4. Married</td><td>HONEY + MOON</td><td>Newlywed celebration</td></tr> </table> <p>From strangers to life partners - the classic love story.</p>`,
                 difficulty: 'medium',
@@ -2828,18 +2828,18 @@
                     { id: 7, display: 'GUILT', type: 'text' },
                     { id: 8, display: 'FREE', type: 'text' }
                 ],
-                // SWEET+TOOTH (craving) â LABOR+LOVE (homemade) â WISH+COME (birthday wish) â GUILT+FREE (indulge)
+                // SWEET+TOOTH (craving) → LABOR+LOVE (homemade) → WISH+COME (birthday wish) → GUILT+FREE (indulge)
                 // Red herring: FREE+LOVE (1960s movement) - tempting!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Baking a Cake',
-                explanation: 'SWEET+TOOTH (craving dessert) â LABOR of LOVE (homemade with care) â WISH+COME true (birthday candles) â GUILT+FREE (enjoy it!)',
+                explanation: 'SWEET+TOOTH (craving dessert) → LABOR of LOVE (homemade with care) → WISH+COME true (birthday candles) → GUILT+FREE (enjoy it!)',
                 decoys: ['Free Love', 'Hippie', 'Emotions'],
                 detailedExplanation: `<h4>Birthday Cake Emotions</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Feeling</th></tr> <tr><td>1. Craving</td><td>SWEET + TOOTH</td><td>Wanting something sweet</td></tr> <tr><td>2. Making</td><td>LABOR + LOVE</td><td>Homemade with care</td></tr> <tr><td>3. Wishing</td><td>WISH + COME</td><td>Birthday wish comes true</td></tr> <tr><td>4. Enjoying</td><td>GUILT + FREE</td><td>Indulge without guilt</td></tr> </table> <p>Tricky: FREE+LOVE (1960s movement) is tempting, but that orphans LABOR!</p>`,
                 difficulty: 'medium',
                 solveTime: '2-3 min'
             },
-            // Puzzle 26: Getting Famous (unknown â celebrity)
+            // Puzzle 26: Getting Famous (unknown → celebrity)
             {
                 items: [
                     { id: 1, display: 'OPEN', type: 'text' },
@@ -2851,12 +2851,12 @@
                     { id: 7, display: 'HALL', type: 'text' },
                     { id: 8, display: 'FAME', type: 'text' }
                 ],
-                // OPEN+MIC (starting) â FAN+MAIL (getting recognition) â SOLD+OUT (popular) â HALL+FAME (legendary)
+                // OPEN+MIC (starting) → FAN+MAIL (getting recognition) → SOLD+OUT (popular) → HALL+FAME (legendary)
                 // Red herring: MAIL+OUT (mailing something) - tempting but wrong!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Getting Famous',
-                explanation: 'OPEN+MIC (amateur start) â FAN+MAIL (letters from fans) â SOLD+OUT (mainstream success) â HALL of FAME (legendary status)',
+                explanation: 'OPEN+MIC (amateur start) → FAN+MAIL (letters from fans) → SOLD+OUT (mainstream success) → HALL of FAME (legendary status)',
                 decoys: ['Mailing Out', 'Music', 'Concerts'],
                 detailedExplanation: `<h4>Path to Stardom</h4> <table> <tr><th>Level</th><th>Pair</th><th>Recognition</th></tr> <tr><td>1. Amateur</td><td>OPEN + MIC</td><td>Performing for free, building skills</td></tr> <tr><td>2. Rising</td><td>FAN + MAIL</td><td>Getting letters from admirers</td></tr> <tr><td>3. Popular</td><td>SOLD + OUT</td><td>Venues at capacity</td></tr> <tr><td>4. Legend</td><td>HALL of + FAME</td><td>Immortalized for contributions</td></tr> </table> <p>Tricky: MAIL+OUT (sending mail) is tempting, but FAN+MAIL represents receiving fan letters!</p>`,
                 difficulty: 'medium',
@@ -2875,17 +2875,17 @@
                     { id: 8, display: '211', type: 'text' }
                 ],
                 // Look-and-Say: each term describes the previous
-                // 1 â 11 â 21 â 1211 â 111221 â 312211
+                // 1 → 11 → 21 → 1211 → 111221 → 312211
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Look-and-Say Sequence',
-                explanation: '21 (one 2, one 1) â 1211 (one 1, one 2, two 1s) â 111221 â 312211. Each number describes what you SEE in the previous number.',
+                explanation: '21 (one 2, one 1) → 1211 (one 1, one 2, two 1s) → 111221 → 312211. Each number describes what you SEE in the previous number.',
                 decoys: ['Binary Code', 'Phone Numbers', 'Math Puzzle'],
-                detailedExplanation: `<h4>Morris Number Sequence</h4> <table> <tr><th>Term</th><th>Pair</th><th>How to Read It</th></tr> <tr><td>1</td><td>2 + 1</td><td>"Two ones" â 21</td></tr> <tr><td>2</td><td>12 + 11</td><td>"One 2, one 1" â 1211</td></tr> <tr><td>3</td><td>1112 + 21</td><td>"One 1, one 2, two 1s" â 111221</td></tr> <tr><td>4</td><td>312 + 211</td><td>"Three 1s, two 2s, one 1" â 312211</td></tr> </table> <p>Each term describes the previous term. The pairing IS the puzzle - you must understand the pattern to pair correctly!</p>`,
+                detailedExplanation: `<h4>Morris Number Sequence</h4> <table> <tr><th>Term</th><th>Pair</th><th>How to Read It</th></tr> <tr><td>1</td><td>2 + 1</td><td>"Two ones" → 21</td></tr> <tr><td>2</td><td>12 + 11</td><td>"One 2, one 1" → 1211</td></tr> <tr><td>3</td><td>1112 + 21</td><td>"One 1, one 2, two 1s" → 111221</td></tr> <tr><td>4</td><td>312 + 211</td><td>"Three 1s, two 2s, one 1" → 312211</td></tr> </table> <p>Each term describes the previous term. The pairing IS the puzzle - you must understand the pattern to pair correctly!</p>`,
                 difficulty: 'hard',
                 solveTime: '5-7 min'
             },
-            // Puzzle 28: Writing a Song (inspiration â hit)
+            // Puzzle 28: Writing a Song (inspiration → hit)
             {
                 items: [
                     { id: 1, display: 'SONG', type: 'text' },
@@ -2897,17 +2897,17 @@
                     { id: 7, display: 'CHART', type: 'text' },
                     { id: 8, display: 'TOPPER', type: 'text' }
                 ],
-                // SONG+IDEA (inspiration) â ROUGH+CUT (demo) â STUDIO+TIME (recording) â CHART+TOPPER (hit)
+                // SONG+IDEA (inspiration) → ROUGH+CUT (demo) → STUDIO+TIME (recording) → CHART+TOPPER (hit)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Writing a Song',
-                explanation: 'SONG+IDEA (inspiration) â ROUGH+CUT (early demo) â STUDIO+TIME (professional recording) â CHART+TOPPER (hit single)',
+                explanation: 'SONG+IDEA (inspiration) → ROUGH+CUT (early demo) → STUDIO+TIME (professional recording) → CHART+TOPPER (hit single)',
                 decoys: ['Music', 'Editing', 'Success'],
                 detailedExplanation: `<h4>Music Production Journey</h4> <table> <tr><th>Phase</th><th>Pair</th><th>Activity</th></tr> <tr><td>1. Inspiration</td><td>SONG + IDEA</td><td>A melody or lyric comes to you</td></tr> <tr><td>2. Demo</td><td>ROUGH + CUT</td><td>Record a basic version</td></tr> <tr><td>3. Recording</td><td>STUDIO + TIME</td><td>Professional production</td></tr> <tr><td>4. Success</td><td>CHART + TOPPER</td><td>Number one hit!</td></tr> </table> <p>From shower singing to Billboard charts.</p>`,
                 difficulty: 'medium',
                 solveTime: '2 min'
             },
-            // Puzzle 29: Getting in Trouble (speeding â prison)
+            // Puzzle 29: Getting in Trouble (speeding → prison)
             {
                 items: [
                     { id: 1, display: 'DRIVE', type: 'text' },
@@ -2919,17 +2919,17 @@
                     { id: 7, display: 'JAIL', type: 'text' },
                     { id: 8, display: 'TIME', type: 'text' }
                 ],
-                // DRIVE+FAST (speeding) â CAR+CRASH (accident) â COURT+DATE (trial) â JAIL+TIME (prison)
+                // DRIVE+FAST (speeding) → CAR+CRASH (accident) → COURT+DATE (trial) → JAIL+TIME (prison)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Getting in Trouble',
-                explanation: 'DRIVE+FAST (speeding) â CAR+CRASH (accident) â COURT+DATE (face charges) â JAIL+TIME (serve sentence)',
+                explanation: 'DRIVE+FAST (speeding) → CAR+CRASH (accident) → COURT+DATE (face charges) → JAIL+TIME (serve sentence)',
                 decoys: ['Racing', 'Vehicles', 'Calendar'],
                 detailedExplanation: `<h4>Consequences Escalate</h4> <table> <tr><th>Action</th><th>Pair</th><th>Result</th></tr> <tr><td>1. Speeding</td><td>DRIVE + FAST</td><td>Reckless decision</td></tr> <tr><td>2. Accident</td><td>CAR + CRASH</td><td>Direct consequence</td></tr> <tr><td>3. Charges</td><td>COURT + DATE</td><td>Face the legal system</td></tr> <tr><td>4. Sentence</td><td>JAIL + TIME</td><td>Pay for the crime</td></tr> </table> <p>One bad decision leads to another - a cautionary tale.</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 30: Healing an Injury (hurt â recovered)
+            // Puzzle 30: Healing an Injury (hurt → recovered)
             {
                 items: [
                     { id: 1, display: 'PAPER', type: 'text' },
@@ -2941,11 +2941,11 @@
                     { id: 7, display: 'CLEAN', type: 'text' },
                     { id: 8, display: 'BILL', type: 'text' }
                 ],
-                // PAPER+CUT (minor injury) â FIRST+AID (treatment) â SICK+LEAVE (recovery) â CLEAN+BILL (of health)
+                // PAPER+CUT (minor injury) → FIRST+AID (treatment) → SICK+LEAVE (recovery) → CLEAN+BILL (of health)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Healing an Injury',
-                explanation: 'PAPER+CUT (ouch) â FIRST+AID (bandage it) â SICK+LEAVE (time off) â CLEAN+BILL of health (recovered)',
+                explanation: 'PAPER+CUT (ouch) → FIRST+AID (bandage it) → SICK+LEAVE (time off) → CLEAN+BILL of health (recovered)',
                 decoys: ['Office', 'Medical', 'Finance'],
                 detailedExplanation: `<h4>Recovery Process</h4> <table> <tr><th>Phase</th><th>Pair</th><th>Status</th></tr> <tr><td>1. Injury</td><td>PAPER + CUT</td><td>Ouch! Something happened</td></tr> <tr><td>2. Treatment</td><td>FIRST + AID</td><td>Clean and bandage</td></tr> <tr><td>3. Recovery</td><td>SICK + LEAVE</td><td>Time off to heal</td></tr> <tr><td>4. Healed</td><td>CLEAN + BILL</td><td>Doctor says you're 100%</td></tr> </table> <p>From "ouch" to "all clear" - the healing timeline.</p>`,
                 difficulty: 'medium',
@@ -2968,13 +2968,13 @@
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'When in Rome',
-                explanation: 'SINGLE+EYE (one=I) â HAND+VEE (five=V) â DIME+EX (ten=X) â CENTURY+SEE (hundred=C). Phonetic Roman numerals!',
+                explanation: 'SINGLE+EYE (one=I) → HAND+VEE (five=V) → DIME+EX (ten=X) → CENTURY+SEE (hundred=C). Phonetic Roman numerals!',
                 decoys: ['I See', 'Eyesight', 'Letters'],
                 detailedExplanation: `<h4>Phonetic Roman Numerals</h4> <table> <tr><th>Value</th><th>Pair</th><th>Why</th></tr> <tr><td>I = 1</td><td>SINGLE + EYE</td><td>"Single" means one, "Eye" sounds like "I"</td></tr> <tr><td>V = 5</td><td>HAND + VEE</td><td>Hand has five fingers, "Vee" sounds like "V"</td></tr> <tr><td>X = 10</td><td>DIME + EX</td><td>Dime is ten cents, "Ex" sounds like "X"</td></tr> <tr><td>C = 100</td><td>CENTURY + SEE</td><td>Century is 100 years, "See" sounds like "C"</td></tr> </table> <p>Deadly trap: EYE+SEE looks like "I see!" but that leaves SINGLE+HAND which doesn't work!</p>`,
                 difficulty: 'hard',
                 solveTime: '4-5 min'
             },
-            // Puzzle 32: Getting a Pet (want â family)
+            // Puzzle 32: Getting a Pet (want → family)
             {
                 items: [
                     { id: 1, display: 'PET', type: 'text' },
@@ -2986,17 +2986,17 @@
                     { id: 7, display: 'FAMILY', type: 'text' },
                     { id: 8, display: 'DOG', type: 'text' }
                 ],
-                // PET+STORE (shopping) â PUPPY+LOVE (adopt) â HOUSE+TRAIN (teaching) â FAMILY+DOG (part of family)
+                // PET+STORE (shopping) → PUPPY+LOVE (adopt) → HOUSE+TRAIN (teaching) → FAMILY+DOG (part of family)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Getting a Pet',
-                explanation: 'PET+STORE (visit shop) â PUPPY+LOVE (fall in love) â HOUSE+TRAIN (teach rules) â FAMILY+DOG (new family member)',
+                explanation: 'PET+STORE (visit shop) → PUPPY+LOVE (fall in love) → HOUSE+TRAIN (teach rules) → FAMILY+DOG (new family member)',
                 decoys: ['Shopping', 'Romance', 'Home'],
                 detailedExplanation: `<h4>New Pet Journey</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Experience</th></tr> <tr><td>1. Shopping</td><td>PET + STORE</td><td>Looking at adorable animals</td></tr> <tr><td>2. Bonding</td><td>PUPPY + LOVE</td><td>Falling in love with one</td></tr> <tr><td>3. Training</td><td>HOUSE + TRAIN</td><td>Teaching rules and routines</td></tr> <tr><td>4. Family</td><td>FAMILY + DOG</td><td>Fully integrated family member</td></tr> </table> <p>From "just looking" to "part of the family."</p>`,
                 difficulty: 'medium',
                 solveTime: '2 min'
             },
-            // Puzzle 33: School Years (youngest â graduate)
+            // Puzzle 33: School Years (youngest → graduate)
             {
                 items: [
                     { id: 1, display: 'FINGER', type: 'text' },
@@ -3008,17 +3008,17 @@
                     { id: 7, display: 'CAP', type: 'text' },
                     { id: 8, display: 'GOWN', type: 'text' }
                 ],
-                // FINGER+PAINT (preschool) â RECESS+BELL (elementary) â PROM+NIGHT (high school) â CAP+GOWN (graduation)
+                // FINGER+PAINT (preschool) → RECESS+BELL (elementary) → PROM+NIGHT (high school) → CAP+GOWN (graduation)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'School Years',
-                explanation: 'FINGER+PAINT (preschool) â RECESS+BELL (elementary) â PROM+NIGHT (high school) â CAP+GOWN (graduation)',
+                explanation: 'FINGER+PAINT (preschool) → RECESS+BELL (elementary) → PROM+NIGHT (high school) → CAP+GOWN (graduation)',
                 decoys: ['Art Supplies', 'School Events', 'Clothing'],
                 detailedExplanation: `<h4>Educational Journey</h4> <table> <tr><th>Age</th><th>Pair</th><th>Stage</th></tr> <tr><td>3-5</td><td>FINGER + PAINT</td><td>Preschool - learning through play</td></tr> <tr><td>6-10</td><td>RECESS + BELL</td><td>Elementary - structured learning begins</td></tr> <tr><td>14-18</td><td>PROM + NIGHT</td><td>High school - social milestones</td></tr> <tr><td>18+</td><td>CAP + GOWN</td><td>Graduation - achievement unlocked</td></tr> </table> <p>From finger painting to diploma - the academic journey.</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 34: Learning to Drive (permit â freedom)
+            // Puzzle 34: Learning to Drive (permit → freedom)
             {
                 items: [
                     { id: 1, display: 'PERMIT', type: 'text' },
@@ -3030,11 +3030,11 @@
                     { id: 7, display: 'ROAD', type: 'text' },
                     { id: 8, display: 'TRIP', type: 'text' }
                 ],
-                // PERMIT+TEST (get permit) â PARKING+LOT (practice) â DRIVING+SCHOOL (lessons) â ROAD+TRIP (freedom)
+                // PERMIT+TEST (get permit) → PARKING+LOT (practice) → DRIVING+SCHOOL (lessons) → ROAD+TRIP (freedom)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Learning to Drive',
-                explanation: 'PERMIT+TEST (get learners permit) â PARKING+LOT (practice basics) â DRIVING+SCHOOL (formal lessons) â ROAD+TRIP (earned freedom)',
+                explanation: 'PERMIT+TEST (get learners permit) → PARKING+LOT (practice basics) → DRIVING+SCHOOL (formal lessons) → ROAD+TRIP (earned freedom)',
                 decoys: ['Travel', 'School', 'DMV'],
                 detailedExplanation: `<h4>Driver's License Journey</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Milestone</th></tr> <tr><td>1. Qualify</td><td>PERMIT + TEST</td><td>Pass written exam, get learner's permit</td></tr> <tr><td>2. Practice</td><td>PARKING + LOT</td><td>Learn basics in empty lots</td></tr> <tr><td>3. Lessons</td><td>DRIVING + SCHOOL</td><td>Professional instruction</td></tr> <tr><td>4. Freedom</td><td>ROAD + TRIP</td><td>License earned, independence achieved</td></tr> </table> <p>The rite of passage every teenager dreams of.</p>`,
                 difficulty: 'medium',
@@ -3044,26 +3044,26 @@
             {
                 items: [
                     { id: 1, display: 'HIGH', type: 'text' },
-                    { id: 2, display: 'ð', type: 'emoji' },
-                    { id: 3, display: '3ï¸â£', type: 'emoji' },
+                    { id: 2, display: '🃏', type: 'emoji' },
+                    { id: 3, display: '3️⃣', type: 'emoji' },
                     { id: 4, display: 'KIND', type: 'text' },
                     { id: 5, display: 'FULL', type: 'text' },
-                    { id: 6, display: 'ð ', type: 'emoji' },
-                    { id: 7, display: 'ð', type: 'emoji' },
+                    { id: 6, display: '🏠', type: 'emoji' },
+                    { id: 7, display: '👑', type: 'emoji' },
                     { id: 8, display: 'FLUSH', type: 'text' }
                 ],
-                // Poker hands worst to best: High Card â Three of a Kind â Full House â Royal Flush
-                // Red herring: ð+HIGH = "Royal Highness" is very tempting!
+                // Poker hands worst to best: High Card → Three of a Kind → Full House → Royal Flush
+                // Red herring: 👑+HIGH = "Royal Highness" is very tempting!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Poker Night',
-                explanation: 'HIGH+ð (High Card) â 3ï¸â£+KIND (Three of a Kind) â FULL+ð  (Full House) â ð+FLUSH (Royal Flush). Worst to best poker hands!',
+                explanation: 'HIGH+🃏 (High Card) → 3️⃣+KIND (Three of a Kind) → FULL+🏠 (Full House) → 👑+FLUSH (Royal Flush). Worst to best poker hands!',
                 decoys: ['Royal Highness', 'Card Games', 'Gambling'],
-                detailedExplanation: `<h4>Poker Hand Rankings</h4> <table> <tr><th>Rank</th><th>Pair</th><th>Hand</th></tr> <tr><td>Weakest</td><td>HIGH + ð</td><td>High Card - no matching cards</td></tr> <tr><td>Medium</td><td>3ï¸â£ + KIND</td><td>Three of a Kind - three matching</td></tr> <tr><td>Strong</td><td>FULL + ð </td><td>Full House - three + pair</td></tr> <tr><td>Best</td><td>ð + FLUSH</td><td>Royal Flush - unbeatable hand</td></tr> </table> <p>Deadly trap: ð+HIGH looks like "Royal Highness" but then ð+FLUSH isn't a real hand!</p>`,
+                detailedExplanation: `<h4>Poker Hand Rankings</h4> <table> <tr><th>Rank</th><th>Pair</th><th>Hand</th></tr> <tr><td>Weakest</td><td>HIGH + 🃏</td><td>High Card - no matching cards</td></tr> <tr><td>Medium</td><td>3️⃣ + KIND</td><td>Three of a Kind - three matching</td></tr> <tr><td>Strong</td><td>FULL + 🏠</td><td>Full House - three + pair</td></tr> <tr><td>Best</td><td>👑 + FLUSH</td><td>Royal Flush - unbeatable hand</td></tr> </table> <p>Deadly trap: 👑+HIGH looks like "Royal Highness" but then 🃏+FLUSH isn't a real hand!</p>`,
                 difficulty: 'hard',
                 solveTime: '3-4 min'
             },
-            // Puzzle 36: Falling Asleep (awake â deep sleep)
+            // Puzzle 36: Falling Asleep (awake → deep sleep)
             {
                 items: [
                     { id: 1, display: 'NIGHT', type: 'text' },
@@ -3075,17 +3075,17 @@
                     { id: 7, display: 'DEAD', type: 'text' },
                     { id: 8, display: 'SLEEP', type: 'text' }
                 ],
-                // NIGHT+OWL (staying up late) â HEAVY+EYELID (getting sleepy) â POWER+NAP (light sleep) â DEAD+SLEEP (out cold)
+                // NIGHT+OWL (staying up late) → HEAVY+EYELID (getting sleepy) → POWER+NAP (light sleep) → DEAD+SLEEP (out cold)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Falling Asleep',
-                explanation: 'NIGHT+OWL (wide awake) â HEAVY+EYELID (drowsy) â POWER+NAP (dozing) â DEAD asleep (unconscious)',
+                explanation: 'NIGHT+OWL (wide awake) → HEAVY+EYELID (drowsy) → POWER+NAP (dozing) → DEAD asleep (unconscious)',
                 decoys: ['Birds', 'Body Parts', 'Energy'],
                 detailedExplanation: `<h4>Sleep Depth Stages</h4> <table> <tr><th>State</th><th>Pair</th><th>Consciousness</th></tr> <tr><td>1. Alert</td><td>NIGHT + OWL</td><td>Wide awake, staying up late</td></tr> <tr><td>2. Drowsy</td><td>HEAVY + EYELID</td><td>Fighting to stay awake</td></tr> <tr><td>3. Light Sleep</td><td>POWER + NAP</td><td>Dozing, easily awakened</td></tr> <tr><td>4. Deep Sleep</td><td>DEAD + SLEEP</td><td>Completely unconscious</td></tr> </table> <p>The journey from "one more episode" to completely out.</p>`,
                 difficulty: 'medium',
                 solveTime: '2-3 min'
             },
-            // Puzzle 37: Storm Approaching (calm â severe)
+            // Puzzle 37: Storm Approaching (calm → severe)
             {
                 items: [
                     { id: 1, display: 'CLEAR', type: 'text' },
@@ -3097,17 +3097,17 @@
                     { id: 7, display: 'FLASH', type: 'text' },
                     { id: 8, display: 'FLOOD', type: 'text' }
                 ],
-                // CLEAR+SKY (fair) â WIND+GUST (breezy) â THUNDER+STORM (storm) â FLASH+FLOOD (severe)
+                // CLEAR+SKY (fair) → WIND+GUST (breezy) → THUNDER+STORM (storm) → FLASH+FLOOD (severe)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Storm Approaching',
-                explanation: 'CLEAR+SKY (fair weather) â WIND+GUST (getting windy) â THUNDER+STORM (storm hits) â FLASH+FLOOD (severe damage)',
+                explanation: 'CLEAR+SKY (fair weather) → WIND+GUST (getting windy) → THUNDER+STORM (storm hits) → FLASH+FLOOD (severe damage)',
                 decoys: ['Weather', 'Nature', 'Disasters'],
                 detailedExplanation: `<h4>Weather Progression</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Conditions</th></tr> <tr><td>1. Fair</td><td>CLEAR + SKY</td><td>Beautiful day, no clouds</td></tr> <tr><td>2. Changing</td><td>WIND + GUST</td><td>Breeze picks up</td></tr> <tr><td>3. Storm</td><td>THUNDER + STORM</td><td>Full storm arrives</td></tr> <tr><td>4. Severe</td><td>FLASH + FLOOD</td><td>Dangerous conditions</td></tr> </table> <p>How quickly weather can change from pleasant to dangerous.</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 38: Building Height (ground â sky)
+            // Puzzle 38: Building Height (ground → sky)
             {
                 items: [
                     { id: 1, display: 'GROUND', type: 'text' },
@@ -3119,11 +3119,11 @@
                     { id: 7, display: 'ROOF', type: 'text' },
                     { id: 8, display: 'TOP', type: 'text' }
                 ],
-                // GROUND+FLOOR (bottom) â SECOND+STORY (middle) â PENT+HOUSE (high) â ROOF+TOP (highest)
+                // GROUND+FLOOR (bottom) → SECOND+STORY (middle) → PENT+HOUSE (high) → ROOF+TOP (highest)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Building Height',
-                explanation: 'GROUND+FLOOR (street level) â SECOND+STORY (above) â PENT+HOUSE (top floor) â ROOF+TOP (very top)',
+                explanation: 'GROUND+FLOOR (street level) → SECOND+STORY (above) → PENT+HOUSE (top floor) → ROOF+TOP (very top)',
                 decoys: ['Real Estate', 'Construction', 'Architecture'],
                 detailedExplanation: `<h4>Vertical Position in Building</h4> <table> <tr><th>Height</th><th>Pair</th><th>Location</th></tr> <tr><td>1. Street</td><td>GROUND + FLOOR</td><td>Entry level, lobby</td></tr> <tr><td>2. Low</td><td>SECOND + STORY</td><td>One floor up</td></tr> <tr><td>3. High</td><td>PENT + HOUSE</td><td>Top floor luxury unit</td></tr> <tr><td>4. Highest</td><td>ROOF + TOP</td><td>Above the penthouse</td></tr> </table> <p>From street level to the sky.</p>`,
                 difficulty: 'medium',
@@ -3141,18 +3141,18 @@
                     { id: 7, display: 'DRAIN', type: 'text' },
                     { id: 8, display: 'CLEANER', type: 'text' }
                 ],
-                // pH scale: acidic (low) â basic (high)
+                // pH scale: acidic (low) → basic (high)
                 // Red herring: ACID+DROP (British candy), LEMON+CLEANER, WATER+DRAIN
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Acid Test',
-                explanation: 'BATTERY+ACID (pH~1) â LEMON+DROP (pH~2) â PURE+WATER (pH 7) â DRAIN+CLEANER (pH~14). Acidic to basic!',
+                explanation: 'BATTERY+ACID (pH~1) → LEMON+DROP (pH~2) → PURE+WATER (pH 7) → DRAIN+CLEANER (pH~14). Acidic to basic!',
                 decoys: ['Acid Drop', 'Lemon Cleaner', 'Chemistry'],
                 detailedExplanation: `<h4>The pH Scale</h4> <table> <tr><th>pH</th><th>Pair</th><th>Substance</th></tr> <tr><td>~1 (Very Acidic)</td><td>BATTERY + ACID</td><td>Sulfuric acid in car batteries</td></tr> <tr><td>~2 (Acidic)</td><td>LEMON + DROP</td><td>Citrus candy, lemon juice</td></tr> <tr><td>7 (Neutral)</td><td>PURE + WATER</td><td>Distilled water is perfectly neutral</td></tr> <tr><td>~14 (Very Basic)</td><td>DRAIN + CLEANER</td><td>Lye-based cleaners are extremely basic</td></tr> </table> <p>Deadly trap: ACID+DROP is a real British hard candy! But that leaves BATTERY+LEMON which doesn't work.</p>`,
                 difficulty: 'hard',
                 solveTime: '3-4 min'
             },
-            // Puzzle 40: Becoming Rich (broke â wealthy)
+            // Puzzle 40: Becoming Rich (broke → wealthy)
             {
                 items: [
                     { id: 1, display: 'FLAT', type: 'text' },
@@ -3164,17 +3164,17 @@
                     { id: 7, display: 'MONEY', type: 'text' },
                     { id: 8, display: 'BAGS', type: 'text' }
                 ],
-                // FLAT+BROKE (poor) â SIDE+HUSTLE (earning) â NEST+EGG (saving) â MONEY+BAGS (rich)
+                // FLAT+BROKE (poor) → SIDE+HUSTLE (earning) → NEST+EGG (saving) → MONEY+BAGS (rich)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Becoming Rich',
-                explanation: 'FLAT+BROKE (no money) â SIDE+HUSTLE (extra income) â NEST+EGG (savings) â MONEY+BAGS (wealthy)',
+                explanation: 'FLAT+BROKE (no money) → SIDE+HUSTLE (extra income) → NEST+EGG (savings) → MONEY+BAGS (wealthy)',
                 decoys: ['Housing', 'Birds', 'Shopping'],
                 detailedExplanation: `<h4>Wealth Building Stages</h4> <table> <tr><th>Status</th><th>Pair</th><th>Financial State</th></tr> <tr><td>1. Broke</td><td>FLAT + BROKE</td><td>No money at all</td></tr> <tr><td>2. Hustle</td><td>SIDE + HUSTLE</td><td>Working extra to earn more</td></tr> <tr><td>3. Saving</td><td>NEST + EGG</td><td>Building up savings</td></tr> <tr><td>4. Wealthy</td><td>MONEY + BAGS</td><td>More than you need</td></tr> </table> <p>The grind from nothing to abundance.</p>`,
                 difficulty: 'medium',
                 solveTime: '2 min'
             },
-            // Puzzle 41: Throwing a Party (planning â aftermath)
+            // Puzzle 41: Throwing a Party (planning → aftermath)
             {
                 items: [
                     { id: 1, display: 'GUEST', type: 'text' },
@@ -3186,17 +3186,17 @@
                     { id: 7, display: 'CLEAN', type: 'text' },
                     { id: 8, display: 'UP', type: 'text' }
                 ],
-                // GUEST+LIST (plan) â PARTY+FAVOR (prepare) â DANCE+FLOOR (party) â CLEAN+UP (after)
+                // GUEST+LIST (plan) → PARTY+FAVOR (prepare) → DANCE+FLOOR (party) → CLEAN+UP (after)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Throwing a Party',
-                explanation: 'GUEST+LIST (planning) â PARTY+FAVOR (preparing) â DANCE+FLOOR (partying) â CLEAN+UP (aftermath)',
+                explanation: 'GUEST+LIST (planning) → PARTY+FAVOR (preparing) → DANCE+FLOOR (partying) → CLEAN+UP (aftermath)',
                 decoys: ['Events', 'Supplies', 'Chores'],
                 detailedExplanation: `<h4>Party Planning Timeline</h4> <table> <tr><th>Phase</th><th>Pair</th><th>Task</th></tr> <tr><td>1. Plan</td><td>GUEST + LIST</td><td>Decide who to invite</td></tr> <tr><td>2. Prepare</td><td>PARTY + FAVOR</td><td>Get supplies and gifts</td></tr> <tr><td>3. Party</td><td>DANCE + FLOOR</td><td>The main event!</td></tr> <tr><td>4. After</td><td>CLEAN + UP</td><td>The not-so-fun part</td></tr> </table> <p>Every great party has the same before and after.</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 42: Morning Workout (start â finish)
+            // Puzzle 42: Morning Workout (start → finish)
             {
                 items: [
                     { id: 1, display: 'WARM', type: 'text' },
@@ -3208,11 +3208,11 @@
                     { id: 7, display: 'COOL', type: 'text' },
                     { id: 8, display: 'DOWN', type: 'text' }
                 ],
-                // WARM+UP (stretch) â HEART+RATE (cardio) â SWEAT+SHOP (intense) â COOL+DOWN (end)
+                // WARM+UP (stretch) → HEART+RATE (cardio) → SWEAT+SHOP (intense) → COOL+DOWN (end)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Morning Workout',
-                explanation: 'WARM+UP (stretch first) â HEART+RATE (cardio starts) â SWEAT+SHOP (peak intensity) â COOL+DOWN (recover)',
+                explanation: 'WARM+UP (stretch first) → HEART+RATE (cardio starts) → SWEAT+SHOP (peak intensity) → COOL+DOWN (recover)',
                 decoys: ['Temperature', 'Medical', 'Shopping'],
                 detailedExplanation: `<h4>Exercise Session</h4> <table> <tr><th>Phase</th><th>Pair</th><th>Activity</th></tr> <tr><td>1. Prepare</td><td>WARM + UP</td><td>Light stretching, get blood flowing</td></tr> <tr><td>2. Cardio</td><td>HEART + RATE</td><td>Elevated heart rate exercise</td></tr> <tr><td>3. Peak</td><td>SWEAT + SHOP</td><td>Maximum intensity</td></tr> <tr><td>4. Recover</td><td>COOL + DOWN</td><td>Slow down, stretch, breathe</td></tr> </table> <p>Never skip the warm-up or cool-down!</p>`,
                 difficulty: 'medium',
@@ -3230,18 +3230,18 @@
                     { id: 7, display: 'STORM', type: 'text' },
                     { id: 8, display: 'CHASE', type: 'text' }
                 ],
-                // Beaufort scale: calm â hurricane
+                // Beaufort scale: calm → hurricane
                 // Red herring: WIND+SURF (windsurfing) is MORE famous than kitesurfing!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Wind Scale',
-                explanation: 'GLASS+LAKE (dead calm) â KITE+SURF (light breeze) â WIND+FARM (strong wind) â STORM+CHASE (severe). Beaufort wind scale!',
+                explanation: 'GLASS+LAKE (dead calm) → KITE+SURF (light breeze) → WIND+FARM (strong wind) → STORM+CHASE (severe). Beaufort wind scale!',
                 decoys: ['Windsurfing', 'Weather', 'Sports'],
                 detailedExplanation: `<h4>Beaufort Wind Scale</h4> <table> <tr><th>Force</th><th>Pair</th><th>Conditions</th></tr> <tr><td>0 - Calm</td><td>GLASS + LAKE</td><td>Mirror-like water, no wind</td></tr> <tr><td>3-4 - Light</td><td>KITE + SURF</td><td>Enough wind for kitesurfing</td></tr> <tr><td>6-7 - Strong</td><td>WIND + FARM</td><td>Optimal for wind turbines</td></tr> <tr><td>10+ - Severe</td><td>STORM + CHASE</td><td>Tornado hunters pursue severe weather</td></tr> </table> <p>Deadly trap: WIND+SURF (windsurfing) is more famous than kitesurfing! But that leaves KITE+FARM which makes no sense.</p>`,
                 difficulty: 'hard',
                 solveTime: '4-5 min'
             },
-            // Puzzle 44: Morning Coffee (waking up â alert)
+            // Puzzle 44: Morning Coffee (waking up → alert)
             {
                 items: [
                     { id: 1, display: 'SNOOZE', type: 'text' },
@@ -3253,17 +3253,17 @@
                     { id: 7, display: 'WIDE', type: 'text' },
                     { id: 8, display: 'AWAKE', type: 'text' }
                 ],
-                // SNOOZE+BUTTON (still sleepy) â FRENCH+PRESS (make coffee) â COFFEE+BREAK (drink it) â WIDE+AWAKE (alert)
+                // SNOOZE+BUTTON (still sleepy) → FRENCH+PRESS (make coffee) → COFFEE+BREAK (drink it) → WIDE+AWAKE (alert)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Morning Coffee',
-                explanation: 'SNOOZE+BUTTON (groggy) â FRENCH+PRESS (brew coffee) â COFFEE+BREAK (drinking) â WIDE+AWAKE (fully alert)',
+                explanation: 'SNOOZE+BUTTON (groggy) → FRENCH+PRESS (brew coffee) → COFFEE+BREAK (drinking) → WIDE+AWAKE (fully alert)',
                 decoys: ['Alarm', 'Cooking', 'Exercise'],
                 detailedExplanation: `<h4>Caffeine Activation</h4> <table> <tr><th>State</th><th>Pair</th><th>Alertness</th></tr> <tr><td>1. Groggy</td><td>SNOOZE + BUTTON</td><td>Still half asleep</td></tr> <tr><td>2. Brewing</td><td>FRENCH + PRESS</td><td>Making the coffee</td></tr> <tr><td>3. Drinking</td><td>COFFEE + BREAK</td><td>Consuming caffeine</td></tr> <tr><td>4. Alert</td><td>WIDE + AWAKE</td><td>Fully functional human</td></tr> </table> <p>The transformation from zombie to person.</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 45: Having a Baby (conception â birth)
+            // Puzzle 45: Having a Baby (conception → birth)
             {
                 items: [
                     { id: 1, display: 'DUE', type: 'text' },
@@ -3275,17 +3275,17 @@
                     { id: 7, display: 'BIRTH', type: 'text' },
                     { id: 8, display: 'DAY', type: 'text' }
                 ],
-                // DUE+DATE (learn pregnant) â BABY+BUMP (showing) â WATER+BREAK (labor starts) â BIRTH+DAY (baby born)
+                // DUE+DATE (learn pregnant) → BABY+BUMP (showing) → WATER+BREAK (labor starts) → BIRTH+DAY (baby born)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Having a Baby',
-                explanation: 'DUE+DATE (doctor visit) â BABY+BUMP (visible pregnancy) â WATER+BREAK (labor begins) â BIRTH+DAY (baby arrives)',
+                explanation: 'DUE+DATE (doctor visit) → BABY+BUMP (visible pregnancy) → WATER+BREAK (labor begins) → BIRTH+DAY (baby arrives)',
                 decoys: ['Calendar', 'Party', 'Swimming'],
                 detailedExplanation: `<h4>Pregnancy Journey</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Milestone</th></tr> <tr><td>1. Confirm</td><td>DUE + DATE</td><td>Doctor confirms pregnancy</td></tr> <tr><td>2. Show</td><td>BABY + BUMP</td><td>Pregnancy becomes visible</td></tr> <tr><td>3. Labor</td><td>WATER + BREAK</td><td>Contractions begin</td></tr> <tr><td>4. Birth</td><td>BIRTH + DAY</td><td>Baby arrives!</td></tr> </table> <p>The nine-month journey to parenthood.</p>`,
                 difficulty: 'easy',
                 solveTime: '1-2 min'
             },
-            // Puzzle 46: Fine Dining (dress up â satisfaction)
+            // Puzzle 46: Fine Dining (dress up → satisfaction)
             {
                 items: [
                     { id: 1, display: 'BLACK', type: 'text' },
@@ -3297,12 +3297,12 @@
                     { id: 7, display: 'FULL', type: 'text' },
                     { id: 8, display: 'STOP', type: 'text' }
                 ],
-                // BLACK+TIE (formal attire) â WHITE+LINEN (tablecloth) â RICH+TASTE (indulge) â FULL+STOP (satisfied)
+                // BLACK+TIE (formal attire) → WHITE+LINEN (tablecloth) → RICH+TASTE (indulge) → FULL+STOP (satisfied)
                 // Red herring: BLACK+WHITE (movie/photo style) - very tempting!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Fine Dining',
-                explanation: 'BLACK+TIE (dress formally) â WHITE+LINEN (elegant table) â RICH+TASTE (savory flavors) â FULL+STOP (completely satisfied)',
+                explanation: 'BLACK+TIE (dress formally) → WHITE+LINEN (elegant table) → RICH+TASTE (savory flavors) → FULL+STOP (completely satisfied)',
                 decoys: ['Black and White', 'Photography', 'Movies'],
                 detailedExplanation: `<h4>Fine Dining Experience</h4> <table> <tr><th>Stage</th><th>Pair</th><th>Meaning</th></tr> <tr><td>1. Dress Up</td><td>BLACK + TIE</td><td>Formal black-tie attire</td></tr> <tr><td>2. Seated</td><td>WHITE + LINEN</td><td>Elegant white tablecloth</td></tr> <tr><td>3. Indulge</td><td>RICH + TASTE</td><td>Rich, complex flavors</td></tr> <tr><td>4. Satisfied</td><td>FULL + STOP</td><td>Completely full, done eating</td></tr> </table> <p>Tricky: BLACK+WHITE (photography/film) is tempting, but that orphans TIE!</p>`,
                 difficulty: 'medium',
@@ -3320,12 +3320,12 @@
                     { id: 7, display: 'DROP', type: 'text' },
                     { id: 8, display: 'BROWN', type: 'text' }
                 ],
-                // Seasons: Winter â Spring â Summer â Fall
+                // Seasons: Winter → Spring → Summer → Fall
                 // Red herring: RAIN+DROP (raindrop) is incredibly common!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Four Seasons',
-                explanation: 'SNOW+WHITE (winter) â RAIN+GREEN (spring growth) â SKY+BLUE (summer) â DROP+BROWN (falling leaves). Seasonal cycle!',
+                explanation: 'SNOW+WHITE (winter) → RAIN+GREEN (spring growth) → SKY+BLUE (summer) → DROP+BROWN (falling leaves). Seasonal cycle!',
                 decoys: ['Raindrop', 'Colors', 'Weather'],
                 detailedExplanation: `<h4>The Four Seasons</h4> <table> <tr><th>Season</th><th>Pair</th><th>Why</th></tr> <tr><td>Winter</td><td>SNOW + WHITE</td><td>Snow blankets the ground white</td></tr> <tr><td>Spring</td><td>RAIN + GREEN</td><td>Spring rains bring new green growth</td></tr> <tr><td>Summer</td><td>SKY + BLUE</td><td>Clear blue summer skies</td></tr> <tr><td>Fall</td><td>DROP + BROWN</td><td>Brown leaves drop from trees</td></tr> </table> <p>Deadly trap: RAIN+DROP (raindrop) is such a common word! But that leaves SNOW+GREEN which makes no sense for seasons.</p>`,
                 difficulty: 'hard',
@@ -3347,7 +3347,7 @@
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Phases of Life',
-                explanation: 'BABY+HOSPITAL (born) â SCHOOL+TEACHER (grow) â RETIRE+GOLF (decline) â MEMORIAL+SPEECH (die)',
+                explanation: 'BABY+HOSPITAL (born) → SCHOOL+TEACHER (grow) → RETIRE+GOLF (decline) → MEMORIAL+SPEECH (die)',
                 decoys: ['Healthcare', 'Education', 'Hobbies'],
                 detailedExplanation: `<h4>Human Life Cycle</h4> <table> <tr><th>Phase</th><th>Pair</th><th>Life Stage</th></tr> <tr><td>Born</td><td>BABY + HOSPITAL</td><td>Entering the world</td></tr> <tr><td>Grow</td><td>SCHOOL + TEACHER</td><td>Learning and developing</td></tr> <tr><td>Decline</td><td>RETIRE + GOLF</td><td>Slowing down, enjoying leisure</td></tr> <tr><td>Die</td><td>MEMORIAL + SPEECH</td><td>Being remembered</td></tr> </table> <p>The universal human journey from birth to legacy.</p>`,
                 difficulty: 'easy',
@@ -3365,12 +3365,12 @@
                     { id: 7, display: 'SPREAD', type: 'text' },
                     { id: 8, display: 'WING', type: 'text' }
                 ],
-                // Metamorphosis: Egg â Larva â Pupa â Adult
+                // Metamorphosis: Egg → Larva → Pupa → Adult
                 // Red herring: SILK+WORM (silkworm) is a common word!
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: "Bug's Life",
-                explanation: 'TINY+EGG (egg) â HUNGRY+WORM (caterpillar) â SILK+WRAP (cocoon) â SPREAD+WING (butterfly). Complete metamorphosis!',
+                explanation: 'TINY+EGG (egg) → HUNGRY+WORM (caterpillar) → SILK+WRAP (cocoon) → SPREAD+WING (butterfly). Complete metamorphosis!',
                 decoys: ['Silkworm', 'Insects', 'Nature'],
                 detailedExplanation: `<h4>Complete Metamorphosis</h4> <table> <tr><th>Stage</th><th>Pair</th><th>What Happens</th></tr> <tr><td>1. Egg</td><td>TINY + EGG</td><td>Life begins as a tiny egg</td></tr> <tr><td>2. Larva</td><td>HUNGRY + WORM</td><td>Caterpillar eats constantly to grow</td></tr> <tr><td>3. Pupa</td><td>SILK + WRAP</td><td>Wraps itself in silk cocoon</td></tr> <tr><td>4. Adult</td><td>SPREAD + WING</td><td>Emerges as butterfly, spreads wings</td></tr> </table> <p>Deadly trap: SILK+WORM (silkworm) is such a common word! But that leaves HUNGRY+WRAP which makes no sense.</p>`,
                 difficulty: 'hard',
@@ -3388,12 +3388,12 @@
                     { id: 7, display: 'PIPE', type: 'text' },
                     { id: 8, display: 'LEAD', type: 'text' }
                 ],
-                // Decay chain: Uranium â Radium â Radon â Lead
+                // Decay chain: Uranium → Radium → Radon → Lead
                 // Red herring: LEAD+PIPE (Clue board game weapon!)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Half Life',
-                explanation: 'YELLOW+CAKE (uranium ore) â WATCH+DIAL (radium paint) â BASEMENT+GAS (radon) â PIPE+LEAD (stable lead). Radioactive decay chain!',
+                explanation: 'YELLOW+CAKE (uranium ore) → WATCH+DIAL (radium paint) → BASEMENT+GAS (radon) → PIPE+LEAD (stable lead). Radioactive decay chain!',
                 decoys: ['Lead Pipe', 'Clue Game', 'Nuclear'],
                 detailedExplanation: `<h4>Radioactive Decay Chain</h4> <table> <tr><th>Element</th><th>Pair</th><th>Connection</th></tr> <tr><td>Uranium</td><td>YELLOW + CAKE</td><td>"Yellowcake" is processed uranium ore</td></tr> <tr><td>Radium</td><td>WATCH + DIAL</td><td>Old watches used radium paint to glow</td></tr> <tr><td>Radon</td><td>BASEMENT + GAS</td><td>Radon gas accumulates in basements</td></tr> <tr><td>Lead</td><td>PIPE + LEAD</td><td>Lead is the stable end of the decay chain</td></tr> </table> <p>Deadly trap: LEAD+PIPE is the murder weapon from Clue! But that leaves BASEMENT+WATCH which doesn't fit the chain.</p>`,
                 difficulty: 'hard',
@@ -3411,12 +3411,12 @@
                     { id: 7, display: 'COOL', type: 'text' },
                     { id: 8, display: 'DOWN', type: 'text' }
                 ],
-                // Star lifecycle: Nebula â Main Sequence â Red Giant â White Dwarf
+                // Star lifecycle: Nebula → Main Sequence → Red Giant → White Dwarf
                 // Red herring: BURN+DOWN (burn down a building)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: 'Stellar Ending',
-                explanation: 'SPACE+DUST (nebula) â BURN+BRIGHT (fusion) â SWELL+RED (red giant) â COOL+DOWN (white dwarf). Life and death of a star!',
+                explanation: 'SPACE+DUST (nebula) → BURN+BRIGHT (fusion) → SWELL+RED (red giant) → COOL+DOWN (white dwarf). Life and death of a star!',
                 decoys: ['Burn Down', 'Fire', 'Astronomy'],
                 detailedExplanation: `<h4>Life Cycle of a Star</h4> <table> <tr><th>Phase</th><th>Pair</th><th>What Happens</th></tr> <tr><td>Birth</td><td>SPACE + DUST</td><td>Stars form from cosmic dust clouds</td></tr> <tr><td>Main Sequence</td><td>BURN + BRIGHT</td><td>Hydrogen fusion makes the star shine</td></tr> <tr><td>Red Giant</td><td>SWELL + RED</td><td>Star expands and cools to red</td></tr> <tr><td>White Dwarf</td><td>COOL + DOWN</td><td>Remnant slowly cools forever</td></tr> </table> <p>Deadly trap: BURN+DOWN sounds like setting fire to something! But that leaves SPACE+BRIGHT which doesn't fit stellar evolution.</p>`,
                 difficulty: 'hard',
@@ -3434,12 +3434,12 @@
                     { id: 7, display: 'LEAGUE', type: 'text' },
                     { id: 8, display: 'CHAMPION', type: 'text' }
                 ],
-                // Pokemon journey: Get balls â Catch â Badges â Champion
+                // Pokemon journey: Get balls → Catch → Badges → Champion
                 // Red herring: CHAMPION+LEAGUE (UEFA soccer!)
                 pairs: [[1, 2], [3, 4], [5, 6], [7, 8]],
                 order: [0, 1, 2, 3],
                 stackName: "Gotta Catch 'Em All",
-                explanation: 'POKE+BALL (equipment) â RARE+CATCH (catch Pokemon) â GYM+BADGE (train) â LEAGUE+CHAMPION (victory). Pokemon trainer journey!',
+                explanation: 'POKE+BALL (equipment) → RARE+CATCH (catch Pokemon) → GYM+BADGE (train) → LEAGUE+CHAMPION (victory). Pokemon trainer journey!',
                 decoys: ['Champions League', 'Soccer', 'Sports'],
                 detailedExplanation: `<h4>Pokemon Trainer Journey</h4> <table> <tr><th>Stage</th><th>Pair</th><th>What Happens</th></tr> <tr><td>1. Start</td><td>POKE + BALL</td><td>Get your Pokeballs from Professor</td></tr> <tr><td>2. Hunt</td><td>RARE + CATCH</td><td>Catch rare Pokemon in the wild</td></tr> <tr><td>3. Train</td><td>GYM + BADGE</td><td>Defeat gym leaders, earn badges</td></tr> <tr><td>4. Victory</td><td>LEAGUE + CHAMPION</td><td>Beat the Elite Four, become Champion</td></tr> </table> <p>Deadly trap: CHAMPION+LEAGUE is UEFA Champions League soccer! But that leaves RARE+BADGE and GYM+CATCH which don't work.</p>`,
                 difficulty: 'hard',
@@ -3659,7 +3659,7 @@
             const nextBtn = document.getElementById('tutorial-next-btn');
             
             prevBtn.style.display = currentTutorialStep === 1 ? 'none' : 'block';
-            nextBtn.textContent = currentTutorialStep === totalTutorialSteps ? "Let's Play! ð®" : 'Next â';
+            nextBtn.textContent = currentTutorialStep === totalTutorialSteps ? "Let's Play! 🎮" : 'Next →';
         }
         
         function nextTutorialStep() {
@@ -3738,7 +3738,7 @@
                 btn.id = 'play-daily-btn';
                 btn.className = 'btn btn-primary';
                 btn.style.cssText = 'margin-top: 15px; width: 100%;';
-                btn.innerHTML = 'ð¯ Now try today\'s puzzle!';
+                btn.innerHTML = '🎯 Now try today\'s puzzle!';
                 btn.onclick = () => {
                     closeResultModal();
                     currentPuzzle = getDailyPuzzle();
@@ -4336,35 +4336,35 @@
             const explanation = currentPuzzle ? currentPuzzle.explanation : '';
             
             if (result.won) {
-                const bonusText = result.bonusCorrect === true ? 'Bonus: â' : 
-                                  result.bonusCorrect === false ? 'Bonus: â' : '';
+                const bonusText = result.bonusCorrect === true ? 'Bonus: ✓' : 
+                                  result.bonusCorrect === false ? 'Bonus: ✗' : '';
                 
                 content.innerHTML = `
                     <button class="modal-close-btn" onclick="closeResultModal()">&times;</button>
-                    <h2 class="success">â Already Played</h2>
+                    <h2 class="success">✅ Already Played</h2>
                     <p style="color: var(--text-muted); margin-bottom: 15px;">You completed Rungs #${result.puzzleNumber} today</p>
-                    <div class="final-result">ð</div>
+                    <div class="final-result">🏆</div>
                     <p>Solved in ${result.attempts} attempt${result.attempts > 1 ? 's' : ''}!</p>
                     <p style="margin-top: 10px;" class="text-secondary">The stack was: <strong class="text-accent">${result.stackName}</strong></p>
                     ${explanation ? `<p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">${explanation}</p>` : ''}
                     ${bonusText ? `<p style="margin-top: 10px;">${bonusText}</p>` : ''}
-                    ${stats.currentStreak > 1 ? `<p style="margin-top: 10px;">ð¥ Current Streak: <strong>${stats.currentStreak}</strong></p>` : ''}
+                    ${stats.currentStreak > 1 ? `<p style="margin-top: 10px;">🔥 Current Streak: <strong>${stats.currentStreak}</strong></p>` : ''}
                     <div class="share-text" id="share-text">${result.shareText || ''}</div>
                     <button class="btn btn-primary" onclick="copyShareFromSaved()">Share Result</button>
-                    <p style="margin-top: 20px; color: var(--text-muted);">â° Come back tomorrow for a new puzzle!</p>
+                    <p style="margin-top: 20px; color: var(--text-muted);">⏰ Come back tomorrow for a new puzzle!</p>
                 `;
             } else {
                 content.innerHTML = `
                     <button class="modal-close-btn" onclick="closeResultModal()">&times;</button>
-                    <h2 class="fail">â Already Played</h2>
+                    <h2 class="fail">✅ Already Played</h2>
                     <p style="color: var(--text-muted); margin-bottom: 15px;">You attempted Rungs #${result.puzzleNumber} today</p>
-                    <div class="final-result">ð</div>
+                    <div class="final-result">😔</div>
                     <p style="margin-bottom: 10px;" class="text-secondary">The correct answer was:</p>
                     <p style="margin-bottom: 15px;"><strong class="text-accent">${result.stackName}</strong></p>
                     ${explanation ? `<p style="margin-bottom: 15px; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">${explanation}</p>` : ''}
                     <div class="share-text" id="share-text">${result.shareText || ''}</div>
                     <button class="btn btn-primary" onclick="copyShareFromSaved()">Share Result</button>
-                    <p style="margin-top: 20px; color: var(--text-muted);">â° Come back tomorrow for a new puzzle!</p>
+                    <p style="margin-top: 20px; color: var(--text-muted);">⏰ Come back tomorrow for a new puzzle!</p>
                 `;
             }
             
@@ -4420,10 +4420,10 @@
         
         function populatePuzzleDropdown() {
             const dropdown = document.getElementById('puzzle-selector');
-            const diffIcon = { easy: 'ð¢', medium: 'ð¡', hard: 'ð´' };
+            const diffIcon = { easy: '🟢', medium: '🟡', hard: '🔴' };
             dropdown.innerHTML = '<option value="">-- Daily Puzzle --</option>' + 
                 PUZZLES.map((p, i) => 
-                    `<option value="${i}">${diffIcon[p.difficulty] || 'âª'} #${i + 1}: ${p.stackName}</option>`
+                    `<option value="${i}">${diffIcon[p.difficulty] || '⚪'} #${i + 1}: ${p.stackName}</option>`
                 ).join('');
         }
         
@@ -4504,7 +4504,7 @@
             
             // Set solve time
             if (solveTimeEl && currentPuzzle.solveTime) {
-                solveTimeEl.textContent = 'â±ï¸ ' + currentPuzzle.solveTime;
+                solveTimeEl.textContent = '⏱️ ' + currentPuzzle.solveTime;
                 solveTimeEl.style.display = 'block';
             } else if (solveTimeEl) {
                 solveTimeEl.style.display = 'none';
@@ -4669,8 +4669,8 @@
                     slot.innerHTML = `
                         <span class="pair-item">${pairDisplay}</span>
                         <span class="reorder-btns">
-                            <button class="reorder-btn" onclick="event.stopPropagation(); moveStackItem(${i}, -1)" ${!canMoveUp ? 'disabled' : ''} title="Move up">â²</button>
-                            <button class="reorder-btn" onclick="event.stopPropagation(); moveStackItem(${i}, 1)" ${!canMoveDown ? 'disabled' : ''} title="Move down">â¼</button>
+                            <button class="reorder-btn" onclick="event.stopPropagation(); moveStackItem(${i}, -1)" ${!canMoveUp ? 'disabled' : ''} title="Move up">▲</button>
+                            <button class="reorder-btn" onclick="event.stopPropagation(); moveStackItem(${i}, 1)" ${!canMoveDown ? 'disabled' : ''} title="Move down">▼</button>
                         </span>
                     `;
                     slot.classList.add('filled');
@@ -4841,7 +4841,7 @@
             const pairsHTML = results.pairs.map((p, i) => `
                 <div class="result-pair">
                     <span class="pair-text">${i + 1}. ${p.display}</span>
-                    <span class="pair-status">${p.correct ? 'â' : 'â'}</span>
+                    <span class="pair-status">${p.correct ? '✓' : '✗'}</span>
                 </div>
             `).join('');
             
@@ -4853,11 +4853,11 @@
                 // Show which positions are correct
                 const positionResults = results.pairs.map((p, i) => {
                     const isCorrectPosition = p.pairIndex === currentPuzzle.order[i];
-                    return `<span style="color: ${isCorrectPosition ? 'var(--accent-success)' : 'var(--accent-error)'};">${isCorrectPosition ? 'â' : 'â'}</span>`;
+                    return `<span style="color: ${isCorrectPosition ? 'var(--accent-success)' : 'var(--accent-error)'};">${isCorrectPosition ? '✓' : '✗'}</span>`;
                 });
                 orderHTML = `
                     <div class="result-order incorrect">
-                        Stack Order: â Wrong
+                        Stack Order: ✗ Wrong
                         <div style="margin-top: 8px; font-size: 0.9rem;">
                             Positions: ${positionResults.join(' ')}
                         </div>
@@ -4866,7 +4866,7 @@
             } else {
                 orderHTML = `
                     <div class="result-order ${results.orderCorrect ? 'correct' : 'incorrect'}">
-                        Stack Order: ${results.orderCorrect ? 'â Correct' : 'â Wrong'}
+                        Stack Order: ${results.orderCorrect ? '✓ Correct' : '✗ Wrong'}
                         ${!allPairsCorrect ? '<div style="font-size: 0.85rem; margin-top: 5px; opacity: 0.7;">(fix pairs first)</div>' : ''}
                     </div>
                 `;
@@ -4874,7 +4874,7 @@
             
             // Show hint reveal message if this was the 2nd attempt in easy mode
             const hintMessage = (attemptsUsed === 2 && gameMode === 'easy') 
-                ? `<div style="margin: 15px 0; padding: 12px; background: var(--bg-tertiary); border: 2px solid var(--accent-gold); border-radius: 8px;">ð¡ Hint revealed: <strong style="color: var(--accent-gold);">${currentPuzzle.stackName}</strong></div>`
+                ? `<div style="margin: 15px 0; padding: 12px; background: var(--bg-tertiary); border: 2px solid var(--accent-gold); border-radius: 8px;">💡 Hint revealed: <strong style="color: var(--accent-gold);">${currentPuzzle.stackName}</strong></div>`
                 : '';
             
             content.innerHTML = `
@@ -4919,7 +4919,7 @@
             ).join('');
             
             content.innerHTML = `
-                <h2 class="success">ð Correct!</h2>
+                <h2 class="success">🎉 Correct!</h2>
                 <p>You solved it in ${attemptsUsed + 1} attempt${attemptsUsed > 0 ? 's' : ''}!</p>
                 <div class="bonus-section">
                     <label>What is this stack called?</label>
@@ -4965,22 +4965,22 @@
             
             const detailedExp = currentPuzzle.detailedExplanation || '';
             const tellMeMoreHTML = detailedExp ? `
-                <button class="tell-me-more-btn" onclick="toggleDetailedExplanation()">ð Tell me more</button>
+                <button class="tell-me-more-btn" onclick="toggleDetailedExplanation()">📖 Tell me more</button>
                 <div class="detailed-explanation" id="detailed-explanation">
                     ${detailedExp}
                 </div>
             ` : '';
             
             if (won) {
-                const bonusText = bonusCorrect === true ? 'Bonus: â' : 
-                                  bonusCorrect === false ? 'Bonus: â' : '';
+                const bonusText = bonusCorrect === true ? 'Bonus: ✓' : 
+                                  bonusCorrect === false ? 'Bonus: ✗' : '';
                 
                 const explanation = currentPuzzle.explanation || '';
                 
                 content.innerHTML = `
                     <button class="modal-close-btn" onclick="closeResultModal()">&times;</button>
-                    <h2 class="success">ð Victory!</h2>
-                    <div class="final-result">ð</div>
+                    <h2 class="success">🎉 Victory!</h2>
+                    <div class="final-result">🏆</div>
                     <p>Solved in ${attemptsUsed + 1} attempt${attemptsUsed > 0 ? 's' : ''}!</p>
                     <p style="margin-top: 10px;" class="text-secondary">The stack was: <strong class="text-accent">${currentPuzzle.stackName}</strong></p>
                     ${explanation ? `<p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">${explanation}</p>` : ''}
@@ -5018,7 +5018,7 @@
                 content.innerHTML = `
                     <button class="modal-close-btn" onclick="closeResultModal()">&times;</button>
                     <h2 class="fail">Game Over</h2>
-                    <div class="final-result">ð</div>
+                    <div class="final-result">😔</div>
                     <p style="margin-bottom: 10px;" class="text-secondary">The correct answer was:</p>
                     <p style="margin-bottom: 5px;"><strong class="text-accent">${currentPuzzle.stackName}</strong></p>
                     ${explanation ? `<p style="margin-bottom: 15px; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">${explanation}</p>` : ''}
@@ -5040,7 +5040,7 @@
                 const tutorialBtn = document.createElement('button');
                 tutorialBtn.className = 'btn btn-primary';
                 tutorialBtn.style.cssText = 'margin-top: 15px; width: 100%; background: var(--accent-success);';
-                tutorialBtn.innerHTML = 'ð¯ Now play today\'s puzzle!';
+                tutorialBtn.innerHTML = '🎯 Now play today\'s puzzle!';
                 tutorialBtn.onclick = () => {
                     closeResultModal();
                     isTutorialMode = false;
@@ -5067,10 +5067,10 @@
             const btn = document.querySelector('.tell-me-more-btn');
             if (el.classList.contains('show')) {
                 el.classList.remove('show');
-                btn.textContent = 'ð Tell me more';
+                btn.textContent = '📖 Tell me more';
             } else {
                 el.classList.add('show');
-                btn.textContent = 'ð Hide details';
+                btn.textContent = '📖 Hide details';
             }
         }
 
@@ -5082,33 +5082,33 @@
             // Generate grid
             let grid;
             if (won) {
-                grid = 'ð©'.repeat(attempts) + 'â¬'.repeat(4 - attempts);
+                grid = '🟩'.repeat(attempts) + '⬛'.repeat(4 - attempts);
             } else {
-                grid = 'ð¥ð¥ð¥ð¥';
+                grid = '🟥🟥🟥🟥';
             }
             
             // Result emoji
-            let resultEmoji = 'â';
+            let resultEmoji = '❌';
             if (won) {
-                resultEmoji = (attempts === 1 && bonusCorrect === true) ? 'ð¯' : 'â';
+                resultEmoji = (attempts === 1 && bonusCorrect === true) ? '🎯' : '✅';
             }
             
             // Mode
-            const modeEmoji = gameMode === 'hard' ? 'ð¥' : 'ð¡';
+            const modeEmoji = gameMode === 'hard' ? '🔥' : '💡';
             const modeLabel = gameMode === 'hard' ? 'Hard' : 'Easy';
             
             // Score line
             let scoreLine = won ? `${attempts}/4` : '0/4';
-            if (bonusCorrect === true) scoreLine += ' Â· â­ Bonus';
+            if (bonusCorrect === true) scoreLine += ' · ⭐ Bonus';
             
             // Mode line with streak
             let modeLine = `${modeEmoji} ${modeLabel}`;
             if (stats.currentStreak > 1) {
-                modeLine += ` Â· ð¥${stats.currentStreak}`;
+                modeLine += ` · 🔥${stats.currentStreak}`;
             }
             
             // Build share text
-            const shareText = `ðª Rungs #${currentPuzzleNumber} ${resultEmoji}
+            const shareText = `🪜 Rungs #${currentPuzzleNumber} ${resultEmoji}
 ${grid}
 ${scoreLine}
 ${modeLine}
@@ -5144,33 +5144,33 @@ rungs.game`;
             // Generate grid
             let grid;
             if (won) {
-                grid = 'ð©'.repeat(attempts) + 'â¬'.repeat(4 - attempts);
+                grid = '🟩'.repeat(attempts) + '⬛'.repeat(4 - attempts);
             } else {
-                grid = 'ð¥ð¥ð¥ð¥';
+                grid = '🟥🟥🟥🟥';
             }
             
             // Result emoji
-            let resultEmoji = 'â';
+            let resultEmoji = '❌';
             if (won) {
-                resultEmoji = (attempts === 1 && bonusCorrect === true) ? 'ð¯' : 'â';
+                resultEmoji = (attempts === 1 && bonusCorrect === true) ? '🎯' : '✅';
             }
             
             // Mode
-            const modeEmoji = gameMode === 'hard' ? 'ð¥' : 'ð¡';
+            const modeEmoji = gameMode === 'hard' ? '🔥' : '💡';
             const modeLabel = gameMode === 'hard' ? 'Hard' : 'Easy';
             
             // Score line
             let scoreLine = won ? `${attempts}/4` : '0/4';
-            if (bonusCorrect === true) scoreLine += ' Â· â­ Bonus';
+            if (bonusCorrect === true) scoreLine += ' · ⭐ Bonus';
             
             // Mode line with streak
             let modeLine = `${modeEmoji} ${modeLabel}`;
             if (stats.currentStreak > 1) {
-                modeLine += ` Â· ð¥${stats.currentStreak}`;
+                modeLine += ` · 🔥${stats.currentStreak}`;
             }
             
             // Build standardized share text
-            const result = `ðª Rungs #${currentPuzzleNumber} ${resultEmoji}
+            const result = `🪜 Rungs #${currentPuzzleNumber} ${resultEmoji}
 ${grid}
 ${scoreLine}
 ${modeLine}
@@ -5231,7 +5231,7 @@ rungs.game`;
         // Initialize Game Shelf Integration
         GameShelfIntegration.init('rungs', {
             name: 'Rungs',
-            icon: 'ðª',
+            icon: '🪜',
             url: 'rungs.game',
             version: VERSION,
             type: 'daily'
@@ -5337,10 +5337,10 @@ rungs.game`;
                 const b = document.createElement('div');
                 b.id = 'pwa-install-banner';
                 b.innerHTML = `<div style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#2d2535,#1a1520);color:#e8e0f0;padding:12px 20px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.3);display:flex;align-items:center;gap:12px;z-index:9999;max-width:90%;border:2px solid #ffd369;">
-                    <span style="font-size:1.5rem;">ðª</span>
+                    <span style="font-size:1.5rem;">🪜</span>
                     <div style="flex:1;"><div style="font-weight:600;">Install Rungs</div><div style="font-size:0.85rem;opacity:0.9;">Add to home screen</div></div>
                     <button onclick="installPWA()" style="background:#ffd369;color:#1a1520;border:none;padding:8px 16px;border-radius:8px;font-weight:600;cursor:pointer;">Install</button>
-                    <button onclick="dismissInstall()" style="background:transparent;border:none;color:#e8e0f0;font-size:1.2rem;cursor:pointer;opacity:0.7;">â</button>
+                    <button onclick="dismissInstall()" style="background:transparent;border:none;color:#e8e0f0;font-size:1.2rem;cursor:pointer;opacity:0.7;">✕</button>
                 </div>`;
                 document.body.appendChild(b);
             }
